@@ -1,10 +1,10 @@
-# John's Plumbing Services — WEDE5020 Portfolio of Evidence
+# John's Plumbing Services WEDE5020 Portfolio of Evidence
 
 A six-page, hand-coded, mobile-first website for a fictional plumbing business in
 Pretoria. Built with HTML5 and CSS3 only — no frameworks, no JavaScript.
 
-**Student:** Asemahle · Diploma in Software Development · The IIE Rosebank College
-**Module:** WEDE5020 — Web Development · Part 2
+**Student:** Asemahle · Diploma in Software Development ·
+**Module:** WEDE5020: Web Development · Part 2
 
 ---
 
@@ -41,24 +41,24 @@ WEDE5020-ASEMAHLE/
 │   ├── Site Map (Detailed).docx
 │   ├── Wireframes.docx
 │   ├── Site_Map.docx
-│   └── wireframes/       Ten wireframe source files (SVG + PNG)
+│   └── wireframes/       Ten wireframe source files
 └── Screenshots/          Browser evidence
 ```
 
 ## Technical summary
 
-- **Semantic HTML5** — `header`, `nav`, `main`, `section`, `article`, `aside`,
+- **Semantic HTML5**: `header`, `nav`, `main`, `section`, `article`, `aside`,
   `figure`/`figcaption`, `address`, `time`, `details`/`summary`, `fieldset`/`legend`,
   `table` with `caption`/`thead`/`scope`.
 - **One external stylesheet** at `css/style.css`, written mobile first.
-- **Four breakpoints** — 36em (576px), 48em (768px), 64em (1024px), 80em (1280px).
+- **Four breakpoints**: 36em (576px), 48em (768px), 64em (1024px), 80em (1280px).
   One column on phones, two at 48em, three or four at 64em.
-- **Relative units** — `rem` for type, `em` for component padding, `%` and `ch` for
+- **Relative units**: `rem` for type, `em` for component padding, `%` and `ch` for
   widths. No fixed pixel layout values.
-- **Responsive images** — `srcset` and `sizes` on every content image.
-- **No JavaScript** — the mobile menu, the accordions and form validation are all
+- **Responsive images**: `srcset` and `sizes` on every content image.
+- **No JavaScript**: the mobile menu, the accordions and form validation are all
   native HTML and CSS.
-- **Accessibility** — skip link, visible keyboard focus, labelled controls,
+- **Accessibility**: skip link, visible keyboard focus, labelled controls,
   `prefers-reduced-motion` and `prefers-contrast` support.
 
 ## Running it locally
@@ -83,5 +83,4 @@ CSS classes follow `.block`, `.block__element`, `.block--modifier` and `.is-stat
 ## Attribution
 
 Business, staff, prices and testimonials are fictional and created for this
-assignment. Photographs are placeholders to be replaced with the student's own
-images.
+assignment. 
