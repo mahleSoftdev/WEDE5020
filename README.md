@@ -1,7 +1,7 @@
 # John's Plumbing Services WEDE5020 Portfolio of Evidence
 
 A six-page, hand-coded, mobile-first website for a fictional plumbing business in
-Pretoria. Built with HTML5 and CSS3 only — no frameworks, no JavaScript.
+Pretoria. Built with HTML5 and CSS3 only,no frameworks, no JavaScript.
 
 **Student:** Asemahle · Diploma in Software Development ·
 **Module:** WEDE5020: Web Development · Part 2
