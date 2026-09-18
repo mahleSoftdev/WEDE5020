@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1430" width="1280" height="1430">
+<rect width="1280" height="1430" fill="#ffffff"/>
+<text x="24" y="26" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#2a3742">01  Home page - desktop (&gt;= 1024px / 64em)</text>
+<text x="24" y="44" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#9aa7b2">Three-column card grids. Hero splits into a 48% text column and a 52% image column.</text>
+<line x1="0" y1="54" x2="1280" y2="54" stroke="#9aa7b2" stroke-width="1"/>
+<g transform="translate(0,62)">
+<rect x="24" y="10" width="1232" height="56" rx="4" fill="#dce6f0" stroke="#0e4c92" stroke-width="1.5"/>
+<rect x="38" y="22" width="32" height="32" rx="4" fill="#ffffff" stroke="#9aa7b2" stroke-width="1.5"/>
+<text x="46" y="42" font-family="Helvetica, Arial, sans-serif" font-size="8" font-weight="700" fill="#9aa7b2" text-anchor="start">LOGO</text>
+<text x="80" y="44" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#0e4c92" text-anchor="start">John&#x27;s Plumbing Services</text>
+<rect x="1131.6" y="24" width="110.39999999999999" height="28" rx="4" fill="#0e4c92" stroke="#0e4c92" stroke-width="1.5"/>
+<text x="1186.8" y="42" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">Book a plumber</text>
+<text x="1093.4999999999998" y="42" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#0e4c92" text-anchor="middle">Contact</text>
+<text x="1023.2999999999998" y="42" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#0e4c92" text-anchor="middle">Gallery</text>
+<text x="949.7999999999998" y="42" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#0e4c92" text-anchor="middle">Services</text>
+<text x="882.8999999999999" y="42" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#0e4c92" text-anchor="middle">About</text>
+<rect x="806.9999999999999" y="24" width="44.4" height="28" rx="4" fill="#c3d6ea" stroke="none" stroke-width="1.5"/>
+<text x="829.1999999999999" y="42" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#0e4c92" text-anchor="middle">Home</text>
+<circle cx="14" cy="38" r="11" fill="#b3261e"/>
+<text x="14" y="42" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="24" y="84" width="1232" height="250" rx="4" fill="#f3f8fc" stroke="#9aa7b2" stroke-width="1.5" stroke-dasharray="5 4"/>
+<text x="38" y="102" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#b3261e" text-anchor="start">&lt;section class=&quot;hero&quot;&gt;</text>
+<text x="48" y="136" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#0e4c92" text-anchor="start">H1  Burst pipe? Blocked drain?</text>
+<text x="48" y="160" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#0e4c92" text-anchor="start">We are on our way.</text>
+<rect x="48" y="180" width="563" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="48" y="191" width="563" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="48" y="202" width="563" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="48" y="221" width="140" height="34" rx="5" fill="#0e4c92" stroke="#0e4c92" stroke-width="1.5"/>
+<text x="118.0" y="243" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">Book a plumber</text>
+<rect x="198" y="221" width="150" height="34" rx="5" fill="#ffffff" stroke="#0e4c92" stroke-width="1.5"/>
+<text x="273.0" y="243" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#0e4c92" text-anchor="middle">Call 082 345 6789</text>
+<text x="48" y="281" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#9aa7b2" text-anchor="start">3 trust points (PIRB / 60 min / guarantee)</text>
+<rect x="646.56" y="124" width="579.44" height="180" rx="4" fill="#e0e6eb" stroke="#9aa7b2" stroke-width="1.5" stroke-dasharray="6 4"/>
+<path d="M646.56 124 L1226.0 304 M1226.0 124 L646.56 304" stroke="#9aa7b2" stroke-width="1" opacity="0.5"/>
+<text x="936.28" y="218.0" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#9aa7b2" text-anchor="middle">HERO IMAGE  srcset 480 / 800 / 1200</text>
+<circle cx="1264" cy="214" r="11" fill="#b3261e"/>
+<text x="1264" y="218" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<rect x="24" y="348" width="1232" height="56" rx="4" fill="#fbe9e7" stroke="#b3261e" stroke-width="1.5"/>
+<text x="40" y="374" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#b3261e" text-anchor="start">&lt;aside&gt;  Emergency notice - stopcock advice</text>
+<rect x="40" y="382" width="420" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="1042" y="361" width="210" height="30" rx="5" fill="#b3261e" stroke="#b3261e" stroke-width="1.5"/>
+<text x="1147" y="380" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">Emergency: 082 345 6789</text>
+<circle cx="1264" cy="376" r="11" fill="#b3261e"/>
+<text x="1264" y="380" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="24" y="442" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#0e4c92" text-anchor="start">H2  What we fix most often</text>
+<rect x="24" y="456" width="420" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="24.0" y="474" width="394.6666666666667" height="160" rx="4" fill="#ffffff" stroke="#9aa7b2" stroke-width="1.5"/>
+<rect x="24.0" y="474" width="394.6666666666667" height="4" fill="#0e4c92"/>
+<text x="40.0" y="508" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#0e4c92" text-anchor="start">H3  Leak detection &amp; repair</text>
+<rect x="40.0" y="522" width="363" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="40.0" y="533" width="363" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="40.0" y="544" width="363" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="40.0" y="555" width="363" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<text x="40.0" y="588" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#9aa7b2" text-anchor="start">From R650  |  price meta</text>
+<text x="40.0" y="612" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#0e4c92" text-anchor="start">See what is included &gt;</text>
+<rect x="442.6666666666667" y="474" width="394.6666666666667" height="160" rx="4" fill="#ffffff" stroke="#9aa7b2" stroke-width="1.5"/>
+<rect x="442.6666666666667" y="474" width="394.6666666666667" height="4" fill="#0e4c92"/>
+<text x="458.6666666666667" y="508" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#0e4c92" text-anchor="start">H3  Geysers &amp; water heating</text>
+<rect x="458.6666666666667" y="522" width="363" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="458.6666666666667" y="533" width="363" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="458.6666666666667" y="544" width="363" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="458.6666666666667" y="555" width="363" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<text x="458.6666666666667" y="588" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#9aa7b2" text-anchor="start">From R650  |  price meta</text>
+<text x="458.6666666666667" y="612" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#0e4c92" text-anchor="start">See what is included &gt;</text>
+<rect x="861.3333333333334" y="474" width="394.6666666666667" height="160" rx="4" fill="#ffffff" stroke="#9aa7b2" stroke-width="1.5"/>
+<rect x="861.3333333333334" y="474" width="394.6666666666667" height="4" fill="#0e4c92"/>
+<text x="877.3333333333334" y="508" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#0e4c92" text-anchor="start">H3  Blocked drains</text>
+<rect x="877.3333333333334" y="522" width="363" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="877.3333333333334" y="533" width="363" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="877.3333333333334" y="544" width="363" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="877.3333333333334" y="555" width="363" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<text x="877.3333333333334" y="588" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#9aa7b2" text-anchor="start">From R650  |  price meta</text>
+<text x="877.3333333333334" y="612" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#0e4c92" text-anchor="start">See what is included &gt;</text>
+<circle cx="1264" cy="554" r="11" fill="#b3261e"/>
+<text x="1264" y="558" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<rect x="24" y="650" width="220" height="34" rx="5" fill="#0e4c92" stroke="#0e4c92" stroke-width="1.5"/>
+<text x="134.0" y="672" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">View all services and prices</text>
+<rect x="24" y="710" width="1232" height="150" rx="4" fill="#f4f6f8" stroke="#9aa7b2" stroke-width="1.5"/>
+<text x="44" y="740" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#0e4c92" text-anchor="start">H2  How a booking works   -   &lt;ol&gt; four numbered steps</text>
+<circle cx="58.0" cy="774" r="13" fill="#0e4c92"/>
+<text x="58.0" y="778" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="78.0" y="778" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#0e4c92" text-anchor="start">Tell us</text>
+<rect x="78.0" y="790" width="243" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="78.0" y="801" width="243" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="78.0" y="812" width="243" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<circle cx="361.0" cy="774" r="13" fill="#0e4c92"/>
+<text x="361.0" y="778" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<text x="381.0" y="778" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#0e4c92" text-anchor="start">We confirm</text>
+<rect x="381.0" y="790" width="243" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="381.0" y="801" width="243" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="381.0" y="812" width="243" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<circle cx="664.0" cy="774" r="13" fill="#0e4c92"/>
+<text x="664.0" y="778" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+<text x="684.0" y="778" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#0e4c92" text-anchor="start">You approve</text>
+<rect x="684.0" y="790" width="243" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="684.0" y="801" width="243" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="684.0" y="812" width="243" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<circle cx="967.0" cy="774" r="13" fill="#0e4c92"/>
+<text x="967.0" y="778" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+<text x="987.0" y="778" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#0e4c92" text-anchor="start">We fix it</text>
+<rect x="987.0" y="790" width="243" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="987.0" y="801" width="243" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="987.0" y="812" width="243" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<circle cx="1264" cy="785" r="11" fill="#b3261e"/>
+<text x="1264" y="789" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+<text x="24" y="898" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#0e4c92" text-anchor="start">H2  What customers say</text>
+<rect x="24.0" y="916" width="394.6666666666667" height="130" rx="4" fill="#f4f6f8" stroke="#9aa7b2" stroke-width="1.5"/>
+<rect x="24.0" y="916" width="4" height="130" fill="#0e4c92"/>
+<text x="42.0" y="942" font-family="Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="#b3261e" text-anchor="start">&lt;blockquote&gt;</text>
+<rect x="42.0" y="954" width="355" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="42.0" y="965" width="355" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="42.0" y="976" width="355" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="42.0" y="987" width="355" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<text x="42.0" y="1024" font-family="Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#9aa7b2" text-anchor="start">&lt;cite&gt; Name, suburb - date</text>
+<rect x="442.6666666666667" y="916" width="394.6666666666667" height="130" rx="4" fill="#f4f6f8" stroke="#9aa7b2" stroke-width="1.5"/>
+<rect x="442.6666666666667" y="916" width="4" height="130" fill="#0e4c92"/>
+<text x="460.6666666666667" y="942" font-family="Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="#b3261e" text-anchor="start">&lt;blockquote&gt;</text>
+<rect x="460.6666666666667" y="954" width="355" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="460.6666666666667" y="965" width="355" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="460.6666666666667" y="976" width="355" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="460.6666666666667" y="987" width="355" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<text x="460.6666666666667" y="1024" font-family="Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#9aa7b2" text-anchor="start">&lt;cite&gt; Name, suburb - date</text>
+<rect x="861.3333333333334" y="916" width="394.6666666666667" height="130" rx="4" fill="#f4f6f8" stroke="#9aa7b2" stroke-width="1.5"/>
+<rect x="861.3333333333334" y="916" width="4" height="130" fill="#0e4c92"/>
+<text x="879.3333333333334" y="942" font-family="Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="#b3261e" text-anchor="start">&lt;blockquote&gt;</text>
+<rect x="879.3333333333334" y="954" width="355" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="879.3333333333334" y="965" width="355" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="879.3333333333334" y="976" width="355" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="879.3333333333334" y="987" width="355" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<text x="879.3333333333334" y="1024" font-family="Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#9aa7b2" text-anchor="start">&lt;cite&gt; Name, suburb - date</text>
+<circle cx="1264" cy="981" r="11" fill="#b3261e"/>
+<text x="1264" y="985" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">6</text>
+<rect x="24" y="1070" width="1232" height="110" rx="4" fill="#0e4c92" stroke="#0e4c92" stroke-width="1.5"/>
+<text x="640.0" y="1112" font-family="Helvetica, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff" text-anchor="middle">Get a firm price before we lift a spanner</text>
+<text x="640.0" y="1132" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#c9ddf2" text-anchor="middle">Quotes are free across Pretoria, Centurion, Midrand and Akasia.</text>
+<rect x="560.0" y="1144" width="160" height="28" rx="5" fill="#ffffff" stroke="#ffffff" stroke-width="1.5"/>
+<text x="640.0" y="1162" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#0e4c92" text-anchor="middle">Book a plumber</text>
+<rect x="24" y="1198" width="1232" height="150" rx="4" fill="#d5dde5" stroke="#9aa7b2" stroke-width="1.5"/>
+<text x="44.0" y="1220" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#0e4c92" text-anchor="start">Business summary</text>
+<rect x="44.0" y="1230" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="44.0" y="1241" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="44.0" y="1252" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="44.0" y="1263" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<text x="347.0" y="1220" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#0e4c92" text-anchor="start">Address + phone</text>
+<rect x="347.0" y="1230" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="347.0" y="1241" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="347.0" y="1252" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="347.0" y="1263" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<text x="650.0" y="1220" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#0e4c92" text-anchor="start">Opening hours</text>
+<rect x="650.0" y="1230" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="650.0" y="1241" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="650.0" y="1252" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="650.0" y="1263" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<text x="953.0" y="1220" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#0e4c92" text-anchor="start">Footer site map</text>
+<rect x="953.0" y="1230" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="953.0" y="1241" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="953.0" y="1252" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="953.0" y="1263" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<text x="44" y="1334" font-family="Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#9aa7b2" text-anchor="start">(c) 2026 John&#x27;s Plumbing Services  |  Built by Asemahle, WEDE5020</text>
+</g></svg>

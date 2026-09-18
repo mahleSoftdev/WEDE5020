@@ -1,0 +1,1799 @@
+@charset "UTF-8";
+/* ==========================================================================
+   FILE:      css/style.css
+   PROJECT:   John's Plumbing Services - WEDE5020 Portfolio of Evidence
+   AUTHOR:    Asemahle
+   APPROACH:  Mobile first. The styles outside any media query are the phone
+              layout. Media queries then ADD the tablet and desktop layouts on
+              top, using min-width. Writing it this way means a phone never
+              applies desktop rules it cannot use.
+
+   NAMING CONVENTION (used consistently throughout):
+     .block             a standalone component          e.g. .card
+     .block__element    a part that belongs to a block  e.g. .card__title
+     .block--modifier   a variation of a block          e.g. .button--primary
+     .is-state          a temporary state               e.g. .is-current
+   Everything is lower case and hyphenated. No IDs are used for styling, so
+   specificity stays flat and predictable.
+
+   TABLE OF CONTENTS
+     01. CSS reset
+     02. Design tokens (custom properties)
+     03. Base and typography
+     04. Layout helpers
+     05. Buttons
+     06. Site header and navigation
+     07. Page head and breadcrumb
+     08. Hero
+     09. Notices, callouts and CTA bands
+     10. Cards, steps, quotes and lists
+     11. Services and tables
+     12. Gallery
+     13. Forms
+     14. Site footer
+     15. Breakpoint 36em  - large phones
+     16. Breakpoint 48em  - tablets (two columns, horizontal nav)
+     17. Breakpoint 64em  - desktop (three columns)
+     18. Breakpoint 80em  - wide desktop
+     19. Accessibility and print
+   ========================================================================== */
+
+
+/* ==========================================================================
+   01. CSS RESET
+   Browsers ship with their own default margins, paddings and font sizes, and
+   they do not agree with each other. Zeroing them first means the site looks
+   the same in Chrome, Firefox, Safari and Edge.
+   ========================================================================== */
+
+/* Remove every default margin and padding, then opt back in deliberately. */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  /* border-box makes width include padding and border, so a box declared as
+     50% wide stays 50% wide once padding is added. Without this, responsive
+     percentage layouts overflow constantly. */
+  box-sizing: border-box;
+}
+
+/* Headings inherit size and weight so a component decides how its own
+   headings look, rather than fighting the browser default. */
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* Lists used for navigation should not show bullets. Content lists get their
+   markers back explicitly in section 10. */
+ul, ol {
+  list-style: none;
+}
+
+/* Images are inline by default, which leaves a mysterious gap underneath.
+   Making them block and max-width:100% is the single most useful responsive
+   image rule there is. */
+img,
+picture,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Form controls do not inherit fonts by default; make them match the page. */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+/* Tables collapse their double borders and fill their container. */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Remove the browser's default fieldset border; we style it ourselves. */
+fieldset {
+  border: 0;
+}
+
+html {
+  /* Smooth scrolling for the in-page "jump to" links on the services page,
+     plus scroll-padding so a jumped-to heading is not hidden behind the
+     sticky header. */
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  /* 100% of the browser's own font size = 16px by default. Setting it as a
+     percentage rather than a fixed pixel value respects a user who has made
+     their browser text larger. Every rem below is measured from here. */
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+/* ==========================================================================
+   02. DESIGN TOKENS
+   Every colour, font and spacing value the site uses is declared once here as
+   a custom property. Changing the brand blue becomes a one-line edit instead
+   of a find-and-replace across 900 lines.
+   ========================================================================== */
+
+:root {
+  /* --- Brand colours, taken from the approved website proposal ----------- */
+  --colour-navy:        #0e4c92;   /* trust, professionalism - primary brand */
+  --colour-navy-dark:   #093566;   /* hover states and footer depth         */
+  --colour-blue:        #2d9cdb;   /* accent, links, active states          */
+  --colour-blue-light:  #e7f3fb;   /* tinted panels                         */
+  --colour-white:       #ffffff;
+  --colour-grey:        #6b7680;   /* steel grey - secondary text           */
+  --colour-grey-light:  #f4f6f8;   /* section backgrounds                   */
+  --colour-grey-line:   #d9e0e6;   /* borders and rules                     */
+  --colour-ink:         #16232e;   /* body text - softer than pure black    */
+  --colour-alert:       #b3261e;   /* emergency and errors                  */
+  --colour-alert-tint:  #fdeceb;
+
+  /* --- Typography -------------------------------------------------------- */
+  --font-heading: "Open Sans", "Segoe UI", Arial, sans-serif;
+  --font-body:    "Roboto", "Helvetica Neue", Arial, sans-serif;
+
+  /* A modular type scale. Every size is in rem so it scales with the user's
+     browser setting. clamp() lets a size grow between a minimum and a maximum
+     as the viewport widens, which removes several media queries. */
+  --size-xs:   0.8125rem;  /* 13px - fine print          */
+  --size-sm:   0.9375rem;  /* 15px - captions, hints     */
+  --size-base: 1rem;       /* 16px - body text           */
+  --size-md:   1.125rem;   /* 18px - lead paragraphs     */
+  --size-lg:   clamp(1.25rem, 1.1rem + 0.7vw, 1.5rem);
+  --size-xl:   clamp(1.5rem, 1.25rem + 1.2vw, 2rem);
+  --size-2xl:  clamp(1.875rem, 1.4rem + 2.2vw, 2.75rem);
+
+  --leading-tight: 1.2;
+  --leading-body:  1.65;
+
+  /* --- Spacing scale ----------------------------------------------------- */
+  --space-2xs: 0.25rem;
+  --space-xs:  0.5rem;
+  --space-sm:  0.75rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  /* --- Layout ------------------------------------------------------------ */
+  --wrapper-max: 75rem;     /* 1200px at the default font size */
+  --radius-sm:   0.25rem;
+  --radius-md:   0.5rem;
+  --radius-lg:   0.75rem;
+
+  /* --- Effects ----------------------------------------------------------- */
+  --shadow-sm: 0 1px 2px rgba(22, 35, 46, 0.08);
+  --shadow-md: 0 4px 14px rgba(22, 35, 46, 0.10);
+  --shadow-lg: 0 12px 28px rgba(22, 35, 46, 0.14);
+  --transition: 180ms ease;
+}
+
+
+/* ==========================================================================
+   03. BASE AND TYPOGRAPHY
+   Default styles that apply to the whole site before any component runs.
+   ========================================================================== */
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--size-base);
+  line-height: var(--leading-body);
+  color: var(--colour-ink);
+  background-color: var(--colour-white);
+  /* A sticky footer: the body fills at least the viewport height so short
+     pages do not leave the footer floating halfway up the screen. */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* main grows to fill whatever space is left between header and footer. */
+main {
+  flex: 1 0 auto;
+}
+
+/* --- Headings ------------------------------------------------------------
+   All headings share one family and a tight line height. Individual sizes are
+   set by the component that owns them, so a card title and a page title can
+   both be <h3> yet look correctly different. */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: var(--leading-tight);
+  color: var(--colour-navy);
+  /* Keeps long headings from stretching past a comfortable reading width.
+     ch is a relative unit equal to the width of the "0" character. */
+  max-width: 26ch;
+}
+
+h1 { font-size: var(--size-2xl); }
+h2 { font-size: var(--size-xl); }
+h3 { font-size: var(--size-lg); font-weight: 600; }
+h4 { font-size: var(--size-md); font-weight: 600; }
+
+/* --- Body text ----------------------------------------------------------- */
+p {
+  margin-bottom: var(--space-md);
+  /* Around 65 characters per line is the comfortable reading measure. */
+  max-width: 65ch;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+strong { font-weight: 600; }
+em     { font-style: italic; }
+
+small {
+  font-size: var(--size-sm);
+  color: var(--colour-grey);
+}
+
+abbr[title] {
+  text-decoration: underline dotted;
+  cursor: help;
+}
+
+/* --- Links --------------------------------------------------------------- */
+a {
+  color: var(--colour-blue);
+  text-decoration: underline;
+  /* Moves the underline clear of descenders like g and y. */
+  text-underline-offset: 0.15em;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--colour-navy);
+}
+
+/* :focus-visible shows an outline for keyboard users but not for mouse
+   clicks, which is the modern, well-behaved focus style. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 3px solid var(--colour-blue);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* --- Skip link -----------------------------------------------------------
+   Sits off-screen until a keyboard user tabs to it, then slides into view. */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-md);
+  z-index: 200;
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--colour-navy);
+  color: var(--colour-white);
+  text-decoration: none;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  transition: top var(--transition);
+}
+
+.skip-link:focus {
+  top: 0;
+  color: var(--colour-white);
+}
+
+
+/* ==========================================================================
+   04. LAYOUT HELPERS
+   Two small utilities that every section reuses.
+   ========================================================================== */
+
+/* .wrapper centres content and stops it stretching to the full width of a
+   large monitor, where lines would become unreadably long.
+   Width is a percentage so the side gutter scales with the screen. */
+.wrapper {
+  width: 90%;
+  max-width: var(--wrapper-max);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* .section is the standard vertical rhythm between blocks of content. */
+.section {
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
+}
+
+.section--tinted {
+  background-color: var(--colour-grey-light);
+}
+
+.section__heading {
+  margin-bottom: var(--space-sm);
+}
+
+.section__intro {
+  color: var(--colour-grey);
+  font-size: var(--size-md);
+  margin-bottom: var(--space-xl);
+}
+
+.section__more,
+.section__note {
+  margin-top: var(--space-xl);
+}
+
+/* .split is the two-column text-and-media pattern used on About and Gallery.
+   It is a single column here (mobile) and becomes two columns at 48em. */
+.split {
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.split__media img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.split__media figcaption,
+.hero__caption {
+  margin-top: var(--space-xs);
+  font-size: var(--size-sm);
+  color: var(--colour-grey);
+}
+
+
+/* ==========================================================================
+   05. BUTTONS
+   One base class plus three modifiers. Buttons are styled on both <a> and
+   <button> so a link and a form control can look identical.
+   ========================================================================== */
+
+.button {
+  display: inline-block;
+  padding: 0.75em 1.5em;         /* em, so padding scales with the font size */
+  border: 2px solid transparent;
+  border-radius: var(--radius-md);
+  font-family: var(--font-heading);
+  font-size: var(--size-base);
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--transition),
+              color var(--transition),
+              border-color var(--transition);
+}
+
+.button + .button {
+  margin-top: var(--space-sm);
+}
+
+.button--primary {
+  background-color: var(--colour-navy);
+  border-color: var(--colour-navy);
+  color: var(--colour-white);
+}
+
+.button--primary:hover {
+  background-color: var(--colour-navy-dark);
+  border-color: var(--colour-navy-dark);
+  color: var(--colour-white);
+}
+
+.button--ghost {
+  background-color: transparent;
+  border-color: var(--colour-navy);
+  color: var(--colour-navy);
+}
+
+.button--ghost:hover {
+  background-color: var(--colour-navy);
+  color: var(--colour-white);
+}
+
+.button--alert {
+  background-color: var(--colour-alert);
+  border-color: var(--colour-alert);
+  color: var(--colour-white);
+}
+
+.button--alert:hover {
+  background-color: #8c1d17;
+  border-color: #8c1d17;
+  color: var(--colour-white);
+}
+
+
+/* ==========================================================================
+   06. SITE HEADER AND NAVIGATION
+   On a phone the menu is hidden behind a button. The button is a <label>
+   linked to a hidden checkbox, and the :checked state opens the menu - no
+   JavaScript is involved.
+   ========================================================================== */
+
+.site-header {
+  position: sticky;      /* the header stays visible while the page scrolls */
+  top: 0;
+  z-index: 100;
+  background-color: var(--colour-navy);
+  box-shadow: var(--shadow-md);
+}
+
+.site-header__bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  padding-top: var(--space-sm);
+  padding-bottom: var(--space-sm);
+}
+
+/* --- Brand --------------------------------------------------------------- */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  text-decoration: none;
+  color: var(--colour-white);
+}
+
+.brand__logo {
+  width: 3rem;           /* rem keeps the logo in proportion to the text */
+  height: auto;
+  background-color: var(--colour-white);
+  border-radius: var(--radius-md);
+  padding: 0.2rem;
+}
+
+.brand__name {
+  font-family: var(--font-heading);
+  font-size: var(--size-base);
+  font-weight: 700;
+  line-height: 1.15;
+  max-width: 9ch;        /* wraps to two short lines on a narrow phone */
+}
+
+/* --- The hidden checkbox that stores the open/closed state ---------------- */
+.nav-toggle {
+  /* Not display:none, because a hidden checkbox must stay focusable for
+     keyboard users. Clipping it to a single pixel hides it visually while
+     leaving it in the accessibility tree. */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* --- The hamburger button ------------------------------------------------ */
+.nav-toggle__btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-sm);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: var(--radius-md);
+  color: var(--colour-white);
+  font-family: var(--font-heading);
+  font-size: var(--size-sm);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* The three bars are drawn with one element and two pseudo-elements. */
+.nav-toggle__bars,
+.nav-toggle__bars::before,
+.nav-toggle__bars::after {
+  display: block;
+  width: 1.25rem;
+  height: 2px;
+  background-color: currentColor;
+  transition: transform var(--transition), background-color var(--transition);
+}
+
+.nav-toggle__bars {
+  position: relative;
+}
+
+.nav-toggle__bars::before,
+.nav-toggle__bars::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.nav-toggle__bars::before { top: -6px; }
+.nav-toggle__bars::after  { top:  6px; }
+
+/* When the checkbox is checked, turn the hamburger into a cross.
+   The ~ combinator reaches forward from the checkbox to a later sibling. */
+.nav-toggle:checked ~ .nav-toggle__btn .nav-toggle__bars {
+  background-color: transparent;
+}
+
+.nav-toggle:checked ~ .nav-toggle__btn .nav-toggle__bars::before {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.nav-toggle:checked ~ .nav-toggle__btn .nav-toggle__bars::after {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+/* Show the focus ring on the label when the hidden checkbox is focused. */
+.nav-toggle:focus-visible ~ .nav-toggle__btn {
+  outline: 3px solid var(--colour-white);
+  outline-offset: 2px;
+}
+
+/* --- The menu itself: closed by default on mobile ------------------------- */
+.site-nav {
+  /* flex-basis 100% forces the nav onto its own line below the brand. */
+  flex-basis: 100%;
+  display: none;
+}
+
+.nav-toggle:checked ~ .site-nav {
+  display: block;
+}
+
+.site-nav__list {
+  display: flex;
+  flex-direction: column;       /* SINGLE COLUMN stack on small screens */
+  gap: var(--space-2xs);
+  padding-top: var(--space-sm);
+  padding-bottom: var(--space-sm);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.site-nav__link {
+  display: block;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-md);
+  color: var(--colour-white);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color var(--transition);
+}
+
+.site-nav__link:hover {
+  background-color: var(--colour-navy-dark);
+  color: var(--colour-white);
+}
+
+/* The current page is marked with a bar as well as a background colour, so it
+   is still obvious to a colour-blind user. */
+.site-nav__link.is-current {
+  background-color: var(--colour-navy-dark);
+  box-shadow: inset 3px 0 0 var(--colour-blue);
+  color: var(--colour-white);
+}
+
+/* The booking link is the primary action, so it is visually promoted. */
+.site-nav__link--cta {
+  background-color: var(--colour-blue);
+  color: var(--colour-white);
+}
+
+.site-nav__link--cta:hover {
+  background-color: var(--colour-white);
+  color: var(--colour-navy);
+}
+
+
+/* ==========================================================================
+   07. PAGE HEAD AND BREADCRUMB
+   The banner that opens every page except the home page.
+   ========================================================================== */
+
+.page-head {
+  background-color: var(--colour-blue-light);
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+  border-bottom: 1px solid var(--colour-grey-line);
+}
+
+.page-head__title {
+  max-width: 20ch;
+}
+
+.page-head__lead {
+  margin-top: var(--space-sm);
+  font-size: var(--size-md);
+  color: var(--colour-grey);
+}
+
+.breadcrumb {
+  margin-top: var(--space-md);
+}
+
+.breadcrumb__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  font-size: var(--size-sm);
+  color: var(--colour-grey);
+}
+
+/* A separator drawn in CSS rather than typed into the HTML, because it is
+   decoration and should not be read aloud by a screen reader. */
+.breadcrumb__list li + li::before {
+  content: "\203A";           /* a single right angle quote */
+  margin-right: var(--space-xs);
+  color: var(--colour-grey);
+}
+
+
+/* ==========================================================================
+   08. HERO
+   Stacked on mobile; becomes a two-column grid at 64em.
+   ========================================================================== */
+
+.hero {
+  background: linear-gradient(180deg, var(--colour-blue-light), var(--colour-white));
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
+}
+
+.hero__grid {
+  display: grid;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.hero__heading {
+  max-width: 18ch;
+}
+
+.hero__lead {
+  margin-top: var(--space-md);
+  font-size: var(--size-md);
+  color: var(--colour-grey);
+}
+
+.hero__actions {
+  margin-top: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  max-width: none;
+}
+
+/* Reset the stacking margin from .button + .button inside this flex row. */
+.hero__actions .button + .button {
+  margin-top: 0;
+}
+
+.hero__trust {
+  margin-top: var(--space-lg);
+  display: grid;
+  gap: var(--space-xs);
+  font-size: var(--size-sm);
+  color: var(--colour-navy);
+}
+
+.hero__trust li {
+  padding-left: 1.5em;
+  position: relative;
+}
+
+.hero__trust li::before {
+  content: "\2713";           /* tick mark */
+  position: absolute;
+  left: 0;
+  color: var(--colour-blue);
+  font-weight: 700;
+}
+
+.hero__media img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+
+/* ==========================================================================
+   09. NOTICES, CALLOUTS AND CTA BANDS
+   ========================================================================== */
+
+.notice {
+  background-color: var(--colour-alert-tint);
+  border-top: 1px solid #f3c9c6;
+  border-bottom: 1px solid #f3c9c6;
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-lg);
+}
+
+.notice__inner {
+  display: grid;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+.notice__text {
+  color: #7a1a14;
+  max-width: 60ch;
+}
+
+.callout {
+  margin-top: var(--space-lg);
+  padding: var(--space-lg);
+  background-color: var(--colour-blue-light);
+  border-left: 4px solid var(--colour-blue);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.callout__title {
+  margin-bottom: var(--space-xs);
+  font-size: var(--size-base);
+}
+
+.cta {
+  background-color: var(--colour-navy);
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-2xl);
+  color: var(--colour-white);
+}
+
+.cta__inner {
+  text-align: center;
+}
+
+.cta__heading {
+  color: var(--colour-white);
+  max-width: 24ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta__text {
+  margin-top: var(--space-sm);
+  margin-left: auto;
+  margin-right: auto;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Inside the dark band the ghost button needs light borders to stay legible. */
+.cta .button--ghost {
+  border-color: var(--colour-white);
+  color: var(--colour-white);
+}
+
+.cta .button--ghost:hover {
+  background-color: var(--colour-white);
+  color: var(--colour-navy);
+}
+
+.cta .button--primary {
+  background-color: var(--colour-blue);
+  border-color: var(--colour-blue);
+}
+
+.cta .button--primary:hover {
+  background-color: var(--colour-white);
+  color: var(--colour-navy);
+}
+
+
+/* ==========================================================================
+   10. CARDS, STEPS, QUOTES AND LISTS
+   .card-grid is the main multi-column device on the site. It is ONE column
+   here and gains columns at the 48em and 64em breakpoints.
+   ========================================================================== */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;      /* SINGLE COLUMN on phones */
+  gap: var(--space-lg);
+}
+
+.card {
+  padding: var(--space-lg);
+  background-color: var(--colour-white);
+  border: 1px solid var(--colour-grey-line);
+  border-top: 3px solid var(--colour-blue);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.card__title {
+  margin-bottom: var(--space-xs);
+}
+
+.card__role {
+  font-size: var(--size-sm);
+  font-weight: 600;
+  color: var(--colour-blue);
+  margin-bottom: var(--space-xs);
+}
+
+.card__meta {
+  margin-top: var(--space-md);
+  font-size: var(--size-sm);
+  color: var(--colour-grey);
+}
+
+.card__link {
+  display: inline-block;
+  margin-top: var(--space-sm);
+  font-weight: 600;
+}
+
+.card--person {
+  border-top-color: var(--colour-navy);
+}
+
+/* --- Ordered process steps ------------------------------------------------
+   The numbers are genuine sequence information, so an <ol> is used and the
+   counter is styled rather than replaced. */
+.steps {
+  counter-reset: step;
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.steps__item {
+  counter-increment: step;
+  position: relative;
+  padding-left: 3rem;
+}
+
+.steps__item::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background-color: var(--colour-navy);
+  color: var(--colour-white);
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.steps__title {
+  margin-bottom: var(--space-2xs);
+  font-size: var(--size-base);
+}
+
+.steps--compact {
+  gap: var(--space-md);
+}
+
+/* --- Quotations ----------------------------------------------------------- */
+.quote {
+  padding: var(--space-lg);
+  background-color: var(--colour-grey-light);
+  border-left: 4px solid var(--colour-blue);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.quote__body p {
+  font-size: var(--size-md);
+  font-style: italic;
+}
+
+.quote__source {
+  margin-top: var(--space-md);
+  font-size: var(--size-sm);
+  color: var(--colour-grey);
+}
+
+.quote__source cite {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--colour-navy);
+}
+
+/* --- Tick and cross lists -------------------------------------------------- */
+.tick-list {
+  display: grid;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-md);
+}
+
+.tick-list li {
+  position: relative;
+  padding-left: 1.6em;
+}
+
+.tick-list li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  color: var(--colour-blue);
+  font-weight: 700;
+}
+
+.tick-list--cross li::before {
+  content: "\2715";
+  color: var(--colour-alert);
+}
+
+/* --- Native disclosure widget ---------------------------------------------- */
+.disclosure {
+  border: 1px solid var(--colour-grey-line);
+  border-radius: var(--radius-md);
+  background-color: var(--colour-white);
+  margin-bottom: var(--space-sm);
+}
+
+.disclosure summary {
+  padding: var(--space-md);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--colour-navy);
+  cursor: pointer;
+  list-style: none;          /* hide the default triangle */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+/* Safari uses a proprietary pseudo-element for the triangle. */
+.disclosure summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Draw our own plus sign that becomes a minus when the panel is open. */
+.disclosure summary::after {
+  content: "+";
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--colour-blue);
+}
+
+.disclosure[open] summary::after {
+  content: "\2212";          /* true minus sign */
+}
+
+.disclosure p {
+  padding: 0 var(--space-md) var(--space-md);
+}
+
+
+/* ==========================================================================
+   11. SERVICES AND TABLES
+   ========================================================================== */
+
+.jump-nav {
+  background-color: var(--colour-navy-dark);
+  padding-top: var(--space-md);
+  padding-bottom: var(--space-md);
+  color: var(--colour-white);
+}
+
+.jump-nav__heading {
+  font-size: var(--size-sm);
+  color: rgba(255, 255, 255, 0.75);
+  margin-bottom: var(--space-xs);
+}
+
+.jump-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs) var(--space-md);
+}
+
+.jump-nav__list a {
+  color: var(--colour-white);
+  font-size: var(--size-sm);
+  font-weight: 600;
+}
+
+.jump-nav__list a:hover {
+  color: var(--colour-blue);
+}
+
+/* --- A single service block ------------------------------------------------ */
+.service {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+  border-top: 1px solid var(--colour-grey-line);
+  /* scroll-margin stops the sticky header covering the heading when a jump
+     link lands on it. */
+  scroll-margin-top: 6rem;
+}
+
+.service:first-of-type {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.service__title {
+  margin-bottom: var(--space-2xs);
+}
+
+.service__price {
+  display: inline-block;
+  margin-bottom: var(--space-md);
+  padding: var(--space-2xs) var(--space-sm);
+  background-color: var(--colour-blue-light);
+  border-radius: var(--radius-sm);
+  font-size: var(--size-sm);
+  font-weight: 600;
+  color: var(--colour-navy);
+}
+
+.service__sub {
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-xs);
+  font-size: var(--size-base);
+  color: var(--colour-grey);
+}
+
+.service__note {
+  margin-top: var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  background-color: var(--colour-alert-tint);
+  border-radius: var(--radius-sm);
+  font-size: var(--size-sm);
+}
+
+/* --- Price table -----------------------------------------------------------
+   Wrapped in .table-scroll so a wide table scrolls sideways inside its own box
+   on a phone instead of breaking the whole page layout. */
+.table-scroll {
+  overflow-x: auto;
+  border: 1px solid var(--colour-grey-line);
+  border-radius: var(--radius-md);
+  background-color: var(--colour-white);
+}
+
+.price-table {
+  min-width: 34rem;          /* forces the scroll rather than crushing columns */
+  font-size: var(--size-sm);
+}
+
+.price-table caption {
+  padding: var(--space-md);
+  text-align: left;
+  font-weight: 600;
+  color: var(--colour-grey);
+}
+
+.price-table th,
+.price-table td {
+  padding: var(--space-sm) var(--space-md);
+  text-align: left;
+  border-bottom: 1px solid var(--colour-grey-line);
+  vertical-align: top;
+}
+
+.price-table thead th {
+  background-color: var(--colour-navy);
+  color: var(--colour-white);
+  font-family: var(--font-heading);
+  white-space: nowrap;
+}
+
+.price-table tbody th {
+  font-weight: 600;
+  color: var(--colour-navy);
+}
+
+/* Zebra striping makes a long row easier to follow across four columns. */
+.price-table tbody tr:nth-child(even) {
+  background-color: var(--colour-grey-light);
+}
+
+.price-table tbody tr:last-child th,
+.price-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+
+/* ==========================================================================
+   12. GALLERY
+   ========================================================================== */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr;     /* SINGLE COLUMN on phones */
+  gap: var(--space-lg);
+}
+
+.gallery__item {
+  background-color: var(--colour-white);
+  border: 1px solid var(--colour-grey-line);
+  border-radius: var(--radius-md);
+  overflow: hidden;               /* clips the image to the rounded corners */
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition);
+}
+
+.gallery__item:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.gallery__item img {
+  width: 100%;
+  /* aspect-ratio keeps every tile the same shape whatever the source photo,
+     so the grid stays even. object-fit crops rather than squashes. */
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+.gallery__caption {
+  padding: var(--space-md);
+  color: var(--colour-ink);
+  font-size: var(--size-base);
+  margin-top: 0;
+}
+
+.gallery__title {
+  font-size: var(--size-base);
+  margin-bottom: var(--space-2xs);
+}
+
+.gallery__meta {
+  margin-top: var(--space-xs);
+  font-size: var(--size-sm);
+  color: var(--colour-grey);
+}
+
+
+/* ==========================================================================
+   13. FORMS
+   Single column on mobile. Paired fields sit side by side from 48em upwards.
+   ========================================================================== */
+
+.form {
+  padding: var(--space-lg);
+  background-color: var(--colour-white);
+  border: 1px solid var(--colour-grey-line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.form__intro {
+  color: var(--colour-grey);
+  font-size: var(--size-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.form__group {
+  padding-bottom: var(--space-lg);
+  margin-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--colour-grey-line);
+}
+
+.form__group:last-of-type {
+  border-bottom: 0;
+  margin-bottom: 0;
+}
+
+.form__legend {
+  font-family: var(--font-heading);
+  font-size: var(--size-md);
+  font-weight: 700;
+  color: var(--colour-navy);
+  margin-bottom: var(--space-md);
+}
+
+/* --- A single field ------------------------------------------------------- */
+.field {
+  margin-bottom: var(--space-md);
+  max-width: none;            /* override the 65ch limit that <p> inherits */
+}
+
+.field__label {
+  display: block;
+  margin-bottom: var(--space-2xs);
+  font-weight: 600;
+  font-size: var(--size-sm);
+  color: var(--colour-navy);
+}
+
+.field__input {
+  /* 100% width so the control always fills its column, at any screen size. */
+  width: 100%;
+  padding: 0.7em 0.85em;
+  border: 2px solid var(--colour-grey-line);
+  border-radius: var(--radius-md);
+  background-color: var(--colour-white);
+  /* 1rem = 16px, which is the minimum that stops iOS Safari zooming in when
+     a field receives focus. Never set form text below 1rem. */
+  font-size: var(--size-base);
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.field__input:hover {
+  border-color: var(--colour-grey);
+}
+
+.field__input:focus {
+  border-color: var(--colour-blue);
+  box-shadow: 0 0 0 3px rgba(45, 156, 219, 0.2);
+  outline: none;
+}
+
+.field__input--area {
+  resize: vertical;           /* users can grow it, but not break the layout */
+  min-height: 7rem;
+}
+
+.field__hint {
+  display: block;
+  margin-top: var(--space-2xs);
+  font-size: var(--size-xs);
+  color: var(--colour-grey);
+}
+
+/* Native validation feedback.
+   :user-invalid only matches AFTER the user has interacted with the field and
+   left it, so an empty form does not greet the visitor in red. Using plain
+   :invalid here would flag every required field before anything was typed. */
+.field__input:user-invalid {
+  border-color: var(--colour-alert);
+  background-color: var(--colour-alert-tint);
+}
+
+/* --- Checkbox and radio rows ---------------------------------------------- */
+.field--check {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+}
+
+.field__check {
+  width: 1.15rem;
+  height: 1.15rem;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+  accent-color: var(--colour-navy);
+}
+
+.field__label--inline {
+  margin-bottom: 0;
+  font-weight: 400;
+  font-size: var(--size-sm);
+  color: var(--colour-ink);
+}
+
+.field-set-inner {
+  margin-bottom: var(--space-md);
+}
+
+.radio-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  margin-top: var(--space-2xs);
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.radio input {
+  width: 1.15rem;
+  height: 1.15rem;
+  accent-color: var(--colour-navy);
+}
+
+.radio label {
+  font-size: var(--size-sm);
+}
+
+/* --- Field rows: two fields side by side from 48em ------------------------- */
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr;     /* stacked on phones */
+  gap: var(--space-md);
+}
+
+.form__actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-top: var(--space-lg);
+  max-width: none;
+}
+
+.form__actions .button + .button {
+  margin-top: 0;
+}
+
+.form__footnote {
+  margin-top: var(--space-md);
+}
+
+/* --- Contact and booking page layouts -------------------------------------- */
+.contact-layout,
+.booking-layout {
+  display: grid;
+  gap: var(--space-xl);
+}
+
+.contact-card {
+  padding: var(--space-md);
+  margin-bottom: var(--space-md);
+  background-color: var(--colour-grey-light);
+  border-radius: var(--radius-md);
+  font-style: normal;          /* <address> is italic by default; remove it */
+}
+
+.contact-card--alert {
+  background-color: var(--colour-alert-tint);
+  border-left: 4px solid var(--colour-alert);
+}
+
+.contact-card__title {
+  font-size: var(--size-base);
+  margin-bottom: var(--space-xs);
+  margin-top: var(--space-lg);
+}
+
+.contact-card .contact-card__title {
+  margin-top: 0;
+}
+
+.contact-card--alert a {
+  font-size: var(--size-lg);
+  font-weight: 700;
+  color: var(--colour-alert);
+}
+
+.map-placeholder {
+  margin-top: var(--space-lg);
+}
+
+.map-placeholder__box {
+  display: grid;
+  place-items: center;
+  /* A percentage height would collapse here because the parent has no fixed
+     height, so a minimum height in rem is the reliable choice. */
+  min-height: 12rem;
+  background-color: var(--colour-blue-light);
+  border: 2px dashed var(--colour-blue);
+  border-radius: var(--radius-md);
+  color: var(--colour-navy);
+  text-align: center;
+  padding: var(--space-md);
+}
+
+.map-placeholder figcaption {
+  margin-top: var(--space-xs);
+  font-size: var(--size-sm);
+  color: var(--colour-grey);
+}
+
+
+/* ==========================================================================
+   14. SITE FOOTER
+   ========================================================================== */
+
+.site-footer {
+  margin-top: auto;               /* pins the footer to the bottom */
+  background-color: var(--colour-navy-dark);
+  color: rgba(255, 255, 255, 0.85);
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-lg);
+}
+
+.site-footer__grid {
+  display: grid;
+  grid-template-columns: 1fr;     /* SINGLE COLUMN on phones */
+  gap: var(--space-xl);
+}
+
+.site-footer__heading {
+  font-size: var(--size-base);
+  color: var(--colour-white);
+  margin-bottom: var(--space-sm);
+  padding-bottom: var(--space-xs);
+  border-bottom: 2px solid var(--colour-blue);
+  display: inline-block;
+}
+
+.site-footer p,
+.site-footer address {
+  font-size: var(--size-sm);
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.site-footer a {
+  color: var(--colour-white);
+  text-decoration: underline;
+}
+
+.site-footer a:hover {
+  color: var(--colour-blue);
+}
+
+.site-footer__list {
+  display: grid;
+  gap: var(--space-2xs);
+  font-size: var(--size-sm);
+}
+
+/* The opening-hours description list: label on the left, value on the right. */
+.hours {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-2xs) var(--space-md);
+  font-size: var(--size-sm);
+}
+
+.hours dt {
+  font-weight: 600;
+  color: var(--colour-white);
+}
+
+.hours dd {
+  text-align: right;
+}
+
+/* A light variant for use on the white contact page. */
+.hours--light dt { color: var(--colour-navy); }
+.hours--light dd { color: var(--colour-grey); }
+
+.site-footer__legal {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  display: grid;
+  gap: var(--space-2xs);
+}
+
+.site-footer__legal small {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* ==========================================================================
+   15. BREAKPOINT: 36em / 576px - LARGE PHONES
+   The first real change: buttons sit side by side instead of stacking, and
+   the footer splits into two columns.
+   ========================================================================== */
+
+@media screen and (min-width: 36em) {
+
+  .hero__actions,
+  .form__actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .hero__trust {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .site-footer__grid {
+    grid-template-columns: repeat(2, 1fr);   /* TWO COLUMNS */
+  }
+
+  .notice__inner {
+    grid-template-columns: 1fr auto;
+    gap: var(--space-lg);
+  }
+
+}
+
+
+/* ==========================================================================
+   16. BREAKPOINT: 48em / 768px - TABLETS
+   The most significant breakpoint. The hamburger disappears and the menu
+   becomes a horizontal bar; card grids become two columns; paired form fields
+   sit side by side.
+   ========================================================================== */
+
+@media screen and (min-width: 48em) {
+
+  /* --- Navigation becomes horizontal ------------------------------------- */
+  .nav-toggle__btn {
+    display: none;             /* no hamburger needed at this width */
+  }
+
+  .site-nav {
+    flex-basis: auto;          /* stop forcing a new line */
+    display: block;            /* always visible, whatever the checkbox says */
+  }
+
+  .site-nav__list {
+    flex-direction: row;       /* MULTI-COLUMN: links laid out in a row */
+    align-items: center;
+    gap: var(--space-2xs);
+    padding-top: 0;
+    padding-bottom: 0;
+    border-top: 0;
+  }
+
+  .site-nav__link {
+    padding: var(--space-xs) var(--space-sm);
+    font-size: var(--size-sm);
+  }
+
+  /* On a horizontal bar an underline reads better than a left bar. */
+  .site-nav__link.is-current {
+    box-shadow: inset 0 -3px 0 var(--colour-blue);
+  }
+
+  .brand__logo {
+    width: 3.5rem;
+  }
+
+  .brand__name {
+    font-size: var(--size-md);
+    max-width: none;
+  }
+
+  /* --- Typography grows slightly ----------------------------------------- */
+  body {
+    font-size: 1.0625rem;      /* 17px - easier reading on a wider measure */
+  }
+
+  /* --- Layout: two columns ----------------------------------------------- */
+  .section {
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-3xl);
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .split {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2xl);
+    align-items: start;
+  }
+
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-xl);
+  }
+
+  .field-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .radio-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+  }
+
+  /* The stacked variant stays stacked even here, because its labels are long. */
+  .radio-row--stack {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  .form {
+    padding: var(--space-xl);
+  }
+
+  .tick-list--columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .site-footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2xl);
+  }
+
+  .site-footer__legal {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+
+}
+
+
+/* ==========================================================================
+   17. BREAKPOINT: 64em / 1024px - DESKTOP
+   Three-column card grids, the hero splits into text and image side by side,
+   and the contact and booking pages become two-column layouts.
+   ========================================================================== */
+
+@media screen and (min-width: 64em) {
+
+  /* --- Hero becomes two columns, text slightly wider than the photo ------- */
+  .hero {
+    padding-top: var(--space-3xl);
+    padding-bottom: var(--space-3xl);
+  }
+
+  .hero__grid {
+    /* Percentages rather than fr so the split is explicit and easy to adjust. */
+    grid-template-columns: 48% 1fr;
+    gap: var(--space-2xl);
+  }
+
+  /* --- Three-column grids ------------------------------------------------- */
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-xl);
+  }
+
+  .steps {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* The booking sidebar keeps its steps stacked even on desktop. */
+  .booking-aside .steps {
+    grid-template-columns: 1fr;
+  }
+
+  /* --- Asymmetric page layouts -------------------------------------------- */
+  .contact-layout {
+    /* Details take about 40%, the form takes the rest. */
+    grid-template-columns: 40% 1fr;
+    gap: var(--space-2xl);
+    align-items: start;
+  }
+
+  .booking-layout {
+    /* The form is the priority, so it gets the larger share. */
+    grid-template-columns: 1fr 32%;
+    gap: var(--space-2xl);
+    align-items: start;
+  }
+
+  /* The sidebar follows the page as the long form scrolls. */
+  .booking-aside {
+    position: sticky;
+    top: 7rem;
+  }
+
+  /* --- Four-column footer -------------------------------------------------- */
+  .site-footer__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* --- Nav links can breathe ----------------------------------------------- */
+  .site-nav__link {
+    padding: var(--space-xs) var(--space-md);
+    font-size: var(--size-base);
+  }
+
+  /* --- The price table no longer needs to scroll ---------------------------- */
+  .price-table {
+    min-width: 0;
+    font-size: var(--size-base);
+  }
+
+  /* --- Services can use a slightly wider measure ---------------------------- */
+  .service p,
+  .service ul {
+    max-width: 70ch;
+  }
+
+}
+
+
+/* ==========================================================================
+   18. BREAKPOINT: 80em / 1280px - WIDE DESKTOP
+   Small refinements only. The content width is already capped by .wrapper, so
+   the job here is to stop the page feeling empty rather than to rearrange it.
+   ========================================================================== */
+
+@media screen and (min-width: 80em) {
+
+  body {
+    font-size: 1.125rem;       /* 18px on large screens */
+  }
+
+  .wrapper {
+    width: 92%;
+  }
+
+  .section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .hero__grid {
+    grid-template-columns: 45% 1fr;
+  }
+
+}
+
+
+/* ==========================================================================
+   19. ACCESSIBILITY AND PRINT
+   ========================================================================== */
+
+/* Respect a user who has asked their operating system to reduce motion.
+   Everyone else keeps the transitions. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Users who set a high-contrast preference get heavier borders. */
+@media (prefers-contrast: more) {
+  .card,
+  .field__input,
+  .disclosure {
+    border-width: 2px;
+    border-color: var(--colour-navy);
+  }
+}
+
+/* A printed page does not need navigation, buttons or shadows, and dark
+   backgrounds waste a great deal of ink. */
+@media print {
+  .site-header,
+  .site-nav,
+  .jump-nav,
+  .notice,
+  .cta,
+  .skip-link,
+  .form__actions,
+  .map-placeholder {
+    display: none;
+  }
+
+  body {
+    font-size: 11pt;
+    color: #000;
+    background: #fff;
+  }
+
+  .card,
+  .form,
+  .gallery__item,
+  .table-scroll {
+    box-shadow: none;
+    border: 1px solid #999;
+    break-inside: avoid;
+  }
+
+  /* Print the destination of every link, since a printed link cannot be
+     clicked. attr() pulls the value straight out of the href attribute. */
+  a[href^="http"]::after,
+  a[href^="mailto"]::after,
+  a[href^="tel"]::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #555;
+  }
+}

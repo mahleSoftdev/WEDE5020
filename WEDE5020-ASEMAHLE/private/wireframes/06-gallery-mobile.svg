@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 375 1162" width="375" height="1162">
+<rect width="375" height="1162" fill="#ffffff"/>
+<text x="14" y="26" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#2a3742">06  Gallery page - mobile</text>
+<text x="14" y="44" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#9aa7b2">One figure per row. Images are capped to a 3:2 box so the grid stays even.</text>
+<line x1="0" y1="54" x2="375" y2="54" stroke="#9aa7b2" stroke-width="1"/>
+<g transform="translate(0,62)">
+<rect x="14" y="10" width="347" height="52" rx="4" fill="#dce6f0" stroke="#0e4c92" stroke-width="1.5"/>
+<rect x="24" y="20" width="32" height="32" rx="4" fill="#ffffff" stroke="#9aa7b2" stroke-width="1.5"/>
+<text x="32" y="40" font-family="Helvetica, Arial, sans-serif" font-size="8" font-weight="700" fill="#9aa7b2" text-anchor="start">LOGO</text>
+<text x="64" y="34" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#0e4c92" text-anchor="start">John&#x27;s</text>
+<text x="64" y="46" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#0e4c92" text-anchor="start">Plumbing</text>
+<rect x="301" y="22" width="56" height="28" rx="4" fill="#ffffff" stroke="#0e4c92" stroke-width="1.5"/>
+<text x="329" y="41" font-family="Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="#0e4c92" text-anchor="middle">MENU</text>
+<rect x="14" y="74" width="347" height="84" rx="4" fill="#dce9f5" stroke="#9aa7b2" stroke-width="1.5"/>
+<text x="26" y="104" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#0e4c92" text-anchor="start">H1  Recent work</text>
+<rect x="26" y="116" width="307" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="26" y="127" width="307" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<text x="26" y="146" font-family="Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#9aa7b2" text-anchor="start">Home &gt; Gallery</text>
+<text x="14" y="186" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#0e4c92" text-anchor="start">H2  Completed jobs</text>
+<rect x="14" y="198" width="347" height="190" rx="4" fill="#ffffff" stroke="#9aa7b2" stroke-width="1.5"/>
+<rect x="14" y="198" width="347" height="110" rx="4" fill="#e0e6eb" stroke="#9aa7b2" stroke-width="1.5" stroke-dasharray="6 4"/>
+<path d="M14 198 L361 308 M361 198 L14 308" stroke="#9aa7b2" stroke-width="1" opacity="0.5"/>
+<text x="187.5" y="257.0" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#9aa7b2" text-anchor="middle">IMG 400w served</text>
+<text x="26" y="332" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#0e4c92" text-anchor="start">H3  Job title</text>
+<rect x="26" y="344" width="323" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="26" y="355" width="323" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<text x="26" y="376" font-family="Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#9aa7b2" text-anchor="start">Suburb - date</text>
+<rect x="14" y="402" width="347" height="190" rx="4" fill="#ffffff" stroke="#9aa7b2" stroke-width="1.5"/>
+<rect x="14" y="402" width="347" height="110" rx="4" fill="#e0e6eb" stroke="#9aa7b2" stroke-width="1.5" stroke-dasharray="6 4"/>
+<path d="M14 402 L361 512 M361 402 L14 512" stroke="#9aa7b2" stroke-width="1" opacity="0.5"/>
+<text x="187.5" y="461.0" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#9aa7b2" text-anchor="middle">IMG 400w served</text>
+<text x="26" y="536" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#0e4c92" text-anchor="start">H3  Job title</text>
+<rect x="26" y="548" width="323" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="26" y="559" width="323" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<text x="26" y="580" font-family="Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#9aa7b2" text-anchor="start">Suburb - date</text>
+<rect x="14" y="606" width="347" height="190" rx="4" fill="#ffffff" stroke="#9aa7b2" stroke-width="1.5"/>
+<rect x="14" y="606" width="347" height="110" rx="4" fill="#e0e6eb" stroke="#9aa7b2" stroke-width="1.5" stroke-dasharray="6 4"/>
+<path d="M14 606 L361 716 M361 606 L14 716" stroke="#9aa7b2" stroke-width="1" opacity="0.5"/>
+<text x="187.5" y="665.0" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#9aa7b2" text-anchor="middle">IMG 400w served</text>
+<text x="26" y="740" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#0e4c92" text-anchor="start">H3  Job title</text>
+<rect x="26" y="752" width="323" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="26" y="763" width="323" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<text x="26" y="784" font-family="Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#9aa7b2" text-anchor="start">Suburb - date</text>
+<text x="14" y="810" font-family="Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#9aa7b2" text-anchor="start">three more figures continue below</text>
+<rect x="14" y="830" width="347" height="250" rx="4" fill="#d5dde5" stroke="#9aa7b2" stroke-width="1.5"/>
+<text x="34.0" y="852" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#0e4c92" text-anchor="start">Business summary</text>
+<rect x="34.0" y="862" width="122" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="34.0" y="873" width="122" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="34.0" y="884" width="122" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="34.0" y="895" width="122" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<text x="197.5" y="852" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#0e4c92" text-anchor="start">Address + phone</text>
+<rect x="197.5" y="862" width="122" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="197.5" y="873" width="122" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="197.5" y="884" width="122" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="197.5" y="895" width="122" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<text x="34.0" y="967" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#0e4c92" text-anchor="start">Opening hours</text>
+<rect x="34.0" y="977" width="122" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="34.0" y="988" width="122" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="34.0" y="999" width="122" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="34.0" y="1010" width="122" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<text x="197.5" y="967" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#0e4c92" text-anchor="start">Footer site map</text>
+<rect x="197.5" y="977" width="122" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="197.5" y="988" width="122" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="197.5" y="999" width="122" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="197.5" y="1010" width="122" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<text x="34" y="1066" font-family="Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#9aa7b2" text-anchor="start">(c) 2026 John&#x27;s Plumbing Services  |  Built by Asemahle, WEDE5020</text>
+</g></svg>

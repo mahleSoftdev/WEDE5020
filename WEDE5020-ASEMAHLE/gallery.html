@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html lang="en-ZA">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Photographs of completed plumbing jobs by John's Plumbing Services in Pretoria - geyser replacements, leak repairs, drain jetting and bathroom installations.">
+  <meta name="keywords" content="plumbing gallery Pretoria, completed plumbing jobs, geyser replacement photos, bathroom installation">
+  <meta name="author" content="John's Plumbing Services">
+
+  <title>Work gallery | John's Plumbing Services</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!--  SITE HEADER  -->
+  <header class="site-header">
+    <div class="wrapper site-header__bar">
+      <a class="brand" href="index.html">
+        <img class="brand__logo"
+             src="images/logo-120.png"
+             srcset="images/logo-120.png 120w, images/logo-240.png 240w"
+             sizes="(min-width: 48em) 4rem, 3rem"
+             width="120" height="118"
+             alt="John's Plumbing Services logo">
+        <span class="brand__name">John&rsquo;s Plumbing Services</span>
+      </a>
+
+      <input class="nav-toggle" type="checkbox" id="nav-toggle">
+      <label class="nav-toggle__btn" for="nav-toggle">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        <span class="nav-toggle__text">Menu</span>
+      </label>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="index.html">Home</a></li>
+          <li><a class="site-nav__link" href="about.html">About</a></li>
+          <li><a class="site-nav__link" href="services.html">Services</a></li>
+          <li><a class="site-nav__link is-current" href="gallery.html" aria-current="page">Gallery</a></li>
+          <li><a class="site-nav__link" href="contact.html">Contact</a></li>
+          <li><a class="site-nav__link site-nav__link--cta" href="booking.html">Book a plumber</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!--  PAGE HEADER  -->
+    <section class="page-head">
+      <div class="wrapper">
+        <h1 class="page-head__title">Recent work</h1>
+        <p class="page-head__lead">
+          Jobs completed across Pretoria and Centurion. Every photograph is our own
+          work, published with the customer&rsquo;s permission.
+        </p>
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol class="breadcrumb__list">
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Gallery</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------------------
+         GALLERY GRID
+         Each item is a <figure> containing the image and a <figcaption> that
+         explains it. A caption turns a decorative photo into evidence.
+
+         RESPONSIVE IMAGES
+         Each image offers a 400px and an 800px file. The sizes attribute says:
+         - at 64em and wider the image occupies about a third of the page
+         - at 48em to 64em it occupies about half
+         - below that it fills the width
+         The browser then downloads the smallest file that will still look sharp.
+         loading="lazy" delays downloading images that are below the fold.
+         ------------------------------------------------------------------ -->
+    <section class="section" aria-labelledby="gallery-heading">
+      <div class="wrapper">
+        <h2 class="section__heading" id="gallery-heading">Completed jobs</h2>
+
+        <div class="gallery-grid">
+
+          <figure class="gallery__item">
+            <img src="images/gallery-bathroom-fitting-800.jpg"
+                 srcset="images/gallery-bathroom-fitting-400.jpg 400w,
+                         images/gallery-bathroom-fitting-800.jpg 800w"
+                 sizes="(min-width: 64em) 30vw, (min-width: 48em) 45vw, 100vw"
+                 width="800" height="533"
+                 loading="lazy"
+                 alt="Plumber fitting a new mixer tap and waste trap beneath a bathroom basin">
+            <figcaption class="gallery__caption">
+              <h3 class="gallery__title">Basin and mixer replacement</h3>
+              <p>Corroded chrome trap and a dripping mixer replaced in a single visit.</p>
+              <p class="gallery__meta">Faerie Glen &middot; <time datetime="2025-09-08">September 2025</time></p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__item">
+            <img src="images/gallery-toolkit-800.jpg"
+                 srcset="images/gallery-toolkit-400.jpg 400w,
+                         images/gallery-toolkit-800.jpg 800w"
+                 sizes="(min-width: 64em) 30vw, (min-width: 48em) 45vw, 100vw"
+                 width="800" height="533"
+                 loading="lazy"
+                 alt="Organised plumbing toolkit with press-fit tool, pipe cutters and fittings laid out">
+            <figcaption class="gallery__caption">
+              <h3 class="gallery__title">Press-fit repipe kit</h3>
+              <p>Press-fit tooling lets us replace a run of pipe without a blowtorch near ceiling boards.</p>
+              <p class="gallery__meta">Workshop &middot; <time datetime="2025-08-19">August 2025</time></p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__item">
+            <img src="images/gallery-pipe-repair-800.jpg"
+                 srcset="images/gallery-pipe-repair-400.jpg 400w,
+                         images/gallery-pipe-repair-800.jpg 800w"
+                 sizes="(min-width: 64em) 30vw, (min-width: 48em) 45vw, 100vw"
+                 width="800" height="533"
+                 loading="lazy"
+                 alt="Copper supply line being soldered during a kitchen leak repair">
+            <figcaption class="gallery__caption">
+              <h3 class="gallery__title">Concealed kitchen leak</h3>
+              <p>Thermal camera located the leak behind a dishwasher; one 300mm section was opened up.</p>
+              <p class="gallery__meta">Centurion &middot; <time datetime="2025-05-02">May 2025</time></p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__item">
+            <img src="images/hero-plumber-800.jpg"
+                 srcset="images/hero-plumber-480.jpg 480w,
+                         images/hero-plumber-800.jpg 800w,
+                         images/hero-plumber-1200.jpg 1200w"
+                 sizes="(min-width: 64em) 30vw, (min-width: 48em) 45vw, 100vw"
+                 width="800" height="450"
+                 loading="lazy"
+                 alt="Technician working on pipework beneath a kitchen sink cabinet">
+            <figcaption class="gallery__caption">
+              <h3 class="gallery__title">Under-sink waste rebuild</h3>
+              <p>A badly fallen waste line re-laid to the correct gradient to stop standing water.</p>
+              <p class="gallery__meta">Garsfontein &middot; <time datetime="2025-07-14">July 2025</time></p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__item">
+            <img src="images/gallery-bathroom-fitting-800.jpg"
+                 srcset="images/gallery-bathroom-fitting-400.jpg 400w,
+                         images/gallery-bathroom-fitting-800.jpg 800w"
+                 sizes="(min-width: 64em) 30vw, (min-width: 48em) 45vw, 100vw"
+                 width="800" height="533"
+                 loading="lazy"
+                 alt="New isolation valves fitted to a bathroom supply line">
+            <figcaption class="gallery__caption">
+              <h3 class="gallery__title">Isolation valves retrofit</h3>
+              <p>Valves added at every fixture so a single tap can be serviced without draining the house.</p>
+              <p class="gallery__meta">Brooklyn &middot; <time datetime="2025-06-11">June 2025</time></p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__item">
+            <img src="images/gallery-pipe-repair-800.jpg"
+                 srcset="images/gallery-pipe-repair-400.jpg 400w,
+                         images/gallery-pipe-repair-800.jpg 800w"
+                 sizes="(min-width: 64em) 30vw, (min-width: 48em) 45vw, 100vw"
+                 width="800" height="533"
+                 loading="lazy"
+                 alt="Pressure control valve and vacuum breakers installed above a replacement geyser">
+            <figcaption class="gallery__caption">
+              <h3 class="gallery__title">150L geyser replacement</h3>
+              <p>Burst unit swapped the same day, with a new drip tray and safety valve set for the insurer.</p>
+              <p class="gallery__meta">Midrand &middot; <time datetime="2025-04-23">April 2025</time></p>
+            </figcaption>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+   
+    <aside class="section section--tinted" aria-labelledby="gallery-aside-heading">
+      <div class="wrapper split">
+        <div class="split__text">
+          <h2 class="section__heading" id="gallery-aside-heading">Why we photograph every job</h2>
+          <p>
+            A photograph before and after the repair protects both sides. It shows the
+            customer what was actually wrong behind the wall, and it gives us a record
+            if a warranty claim comes back to us a year later.
+          </p>
+          <p>
+            Insurers accept our photo reports for geyser and burst-pipe claims, which
+            usually shortens the assessment by a week or more.
+          </p>
+        </div>
+        <div class="split__text">
+          <h2 class="section__heading">Want your job on this page?</h2>
+          <p>
+            We only publish photographs when the customer has said yes in writing.
+            If you would rather we did not, just say so when you book &mdash; it makes
+            no difference to the price or the guarantee.
+          </p>
+          <p><a class="button button--primary" href="booking.html">Book a plumber</a></p>
+        </div>
+      </div>
+    </aside>
+
+  </main>
+
+  <!--  SITE FOOTER  -->
+  <footer class="site-footer">
+    <div class="wrapper site-footer__grid">
+
+      <div class="site-footer__col">
+        <h2 class="site-footer__heading">John&rsquo;s Plumbing Services</h2>
+        <p>Licensed and insured plumbing for homes and small businesses across the Tshwane metro.</p>
+        <p>PIRB registration 2015/PL/0483</p>
+      </div>
+
+      <div class="site-footer__col">
+        <h2 class="site-footer__heading">Find us</h2>
+        <address class="site-footer__address">
+          14 Rigel Avenue, Waterkloof Ridge<br>
+          Pretoria, 0181<br>
+          <a href="tel:+27123456789">012 345 6789</a><br>
+          <a href="mailto:info@johnsplumbing.co.za">info@johnsplumbing.co.za</a>
+        </address>
+      </div>
+
+      <div class="site-footer__col">
+        <h2 class="site-footer__heading">Opening hours</h2>
+        <dl class="hours">
+          <dt>Mon &ndash; Fri</dt><dd>07:00 &ndash; 17:00</dd>
+          <dt>Saturday</dt><dd>08:00 &ndash; 13:00</dd>
+          <dt>Sunday</dt><dd>Emergency call-outs only</dd>
+          <dt>Emergencies</dt><dd>24 hours, every day</dd>
+        </dl>
+      </div>
+
+      <div class="site-footer__col">
+        <h2 class="site-footer__heading">Site map</h2>
+        <nav aria-label="Footer navigation">
+          <ul class="site-footer__list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="booking.html">Book a plumber</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+
+    <div class="wrapper site-footer__legal">
+      <p><small>&copy; <time datetime="2026">2026</time> John&rsquo;s Plumbing Services. All rights reserved.</small></p>
+      <p><small>Built by Asemahle for WEDE5020 &mdash; The IIE Rosebank College.</small></p>
+    </div>
+  </footer>
+
+</body>
+</html>

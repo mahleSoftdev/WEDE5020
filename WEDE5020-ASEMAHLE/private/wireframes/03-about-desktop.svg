@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1410" width="1280" height="1410">
+<rect width="1280" height="1410" fill="#ffffff"/>
+<text x="24" y="26" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#2a3742">03  About page - desktop</text>
+<text x="24" y="44" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#9aa7b2">Page-head banner with breadcrumb, a 50/50 text-and-image split, then a four-card team grid.</text>
+<line x1="0" y1="54" x2="1280" y2="54" stroke="#9aa7b2" stroke-width="1"/>
+<g transform="translate(0,62)">
+<rect x="24" y="10" width="1232" height="56" rx="4" fill="#dce6f0" stroke="#0e4c92" stroke-width="1.5"/>
+<rect x="38" y="22" width="32" height="32" rx="4" fill="#ffffff" stroke="#9aa7b2" stroke-width="1.5"/>
+<text x="46" y="42" font-family="Helvetica, Arial, sans-serif" font-size="8" font-weight="700" fill="#9aa7b2" text-anchor="start">LOGO</text>
+<text x="80" y="44" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#0e4c92" text-anchor="start">John&#x27;s Plumbing Services</text>
+<rect x="1131.6" y="24" width="110.39999999999999" height="28" rx="4" fill="#0e4c92" stroke="#0e4c92" stroke-width="1.5"/>
+<text x="1186.8" y="42" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">Book a plumber</text>
+<text x="1093.4999999999998" y="42" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#0e4c92" text-anchor="middle">Contact</text>
+<text x="1023.2999999999998" y="42" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#0e4c92" text-anchor="middle">Gallery</text>
+<text x="949.7999999999998" y="42" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#0e4c92" text-anchor="middle">Services</text>
+<rect x="857.3999999999999" y="24" width="51.0" height="28" rx="4" fill="#c3d6ea" stroke="none" stroke-width="1.5"/>
+<text x="882.8999999999999" y="42" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#0e4c92" text-anchor="middle">About</text>
+<text x="829.1999999999999" y="42" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#0e4c92" text-anchor="middle">Home</text>
+<rect x="24" y="80" width="1232" height="96" rx="4" fill="#dce9f5" stroke="#9aa7b2" stroke-width="1.5"/>
+<text x="44" y="118" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="700" fill="#0e4c92" text-anchor="start">H1  About John&#x27;s Plumbing Services</text>
+<rect x="44" y="132" width="420" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="44" y="143" width="420" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<text x="44" y="166" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#b3261e" text-anchor="start">Home  &gt;  About      &lt;- breadcrumb &lt;nav&gt; with &lt;ol&gt;</text>
+<circle cx="1264" cy="162" r="11" fill="#b3261e"/>
+<text x="1264" y="166" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">7</text>
+<text x="24" y="214" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#0e4c92" text-anchor="start">H2  How we started</text>
+<rect x="24" y="232" width="596" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="24" y="243" width="596" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="24" y="254" width="596" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="24" y="265" width="596" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="24" y="276" width="596" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="24" y="287" width="596" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="24" y="298" width="596" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="24" y="309" width="596" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="24" y="320" width="596" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="660.0" y="198" width="596.0" height="200" rx="4" fill="#e0e6eb" stroke="#9aa7b2" stroke-width="1.5" stroke-dasharray="6 4"/>
+<path d="M660.0 198 L1256.0 398 M1256.0 198 L660.0 398" stroke="#9aa7b2" stroke-width="1" opacity="0.5"/>
+<text x="958.0" y="302.0" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#9aa7b2" text-anchor="middle">TEAM IMAGE  srcset 400 / 800</text>
+<text x="660.0" y="414" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#9aa7b2" text-anchor="start">&lt;figcaption&gt; John at the workshop, 2025</text>
+<circle cx="1264" cy="298" r="11" fill="#b3261e"/>
+<text x="1264" y="302" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">8</text>
+<rect x="24" y="428" width="1232" height="190" rx="4" fill="#f4f6f8" stroke="#9aa7b2" stroke-width="1.5"/>
+<text x="44" y="460" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="700" fill="#0e4c92" text-anchor="start">H2  What we are working towards</text>
+<rect x="44.0" y="478" width="381.3333333333333" height="120" rx="4" fill="#ffffff" stroke="#9aa7b2" stroke-width="1.5"/>
+<text x="58.0" y="504" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#0e4c92" text-anchor="start">H3  Our mission</text>
+<rect x="58.0" y="516" width="353" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="58.0" y="527" width="353" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="58.0" y="538" width="353" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="58.0" y="549" width="353" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="58.0" y="560" width="353" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="449.3333333333333" y="478" width="381.3333333333333" height="120" rx="4" fill="#ffffff" stroke="#9aa7b2" stroke-width="1.5"/>
+<text x="463.3333333333333" y="504" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#0e4c92" text-anchor="start">H3  Our vision</text>
+<rect x="463.3333333333333" y="516" width="353" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="463.3333333333333" y="527" width="353" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="463.3333333333333" y="538" width="353" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="463.3333333333333" y="549" width="353" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="463.3333333333333" y="560" width="353" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="854.6666666666666" y="478" width="381.3333333333333" height="120" rx="4" fill="#ffffff" stroke="#9aa7b2" stroke-width="1.5"/>
+<text x="868.6666666666666" y="504" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#0e4c92" text-anchor="start">H3  Our values</text>
+<rect x="868.6666666666666" y="516" width="353" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="868.6666666666666" y="527" width="353" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="868.6666666666666" y="538" width="353" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="868.6666666666666" y="549" width="353" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="868.6666666666666" y="560" width="353" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<text x="24" y="656" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#0e4c92" text-anchor="start">H2  The people who arrive at your door</text>
+<rect x="24.0" y="676" width="293.0" height="140" rx="4" fill="#ffffff" stroke="#9aa7b2" stroke-width="1.5"/>
+<rect x="24.0" y="676" width="293.0" height="4" fill="#0e4c92"/>
+<text x="38.0" y="710" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#0e4c92" text-anchor="start">H3  John Mahlangu</text>
+<text x="38.0" y="726" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#9aa7b2" text-anchor="start">role line</text>
+<rect x="38.0" y="738" width="265" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="38.0" y="749" width="265" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="38.0" y="760" width="265" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="38.0" y="771" width="265" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="38.0" y="782" width="265" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="337.0" y="676" width="293.0" height="140" rx="4" fill="#ffffff" stroke="#9aa7b2" stroke-width="1.5"/>
+<rect x="337.0" y="676" width="293.0" height="4" fill="#0e4c92"/>
+<text x="351.0" y="710" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#0e4c92" text-anchor="start">H3  Sipho Dlamini</text>
+<text x="351.0" y="726" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#9aa7b2" text-anchor="start">role line</text>
+<rect x="351.0" y="738" width="265" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="351.0" y="749" width="265" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="351.0" y="760" width="265" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="351.0" y="771" width="265" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="351.0" y="782" width="265" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="650.0" y="676" width="293.0" height="140" rx="4" fill="#ffffff" stroke="#9aa7b2" stroke-width="1.5"/>
+<rect x="650.0" y="676" width="293.0" height="4" fill="#0e4c92"/>
+<text x="664.0" y="710" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#0e4c92" text-anchor="start">H3  Rachel Botha</text>
+<text x="664.0" y="726" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#9aa7b2" text-anchor="start">role line</text>
+<rect x="664.0" y="738" width="265" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="664.0" y="749" width="265" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="664.0" y="760" width="265" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="664.0" y="771" width="265" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="664.0" y="782" width="265" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="963.0" y="676" width="293.0" height="140" rx="4" fill="#ffffff" stroke="#9aa7b2" stroke-width="1.5"/>
+<rect x="963.0" y="676" width="293.0" height="4" fill="#0e4c92"/>
+<text x="977.0" y="710" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#0e4c92" text-anchor="start">H3  Lerato Nkosi</text>
+<text x="977.0" y="726" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#9aa7b2" text-anchor="start">role line</text>
+<rect x="977.0" y="738" width="265" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="977.0" y="749" width="265" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="977.0" y="760" width="265" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="977.0" y="771" width="265" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="977.0" y="782" width="265" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<circle cx="1264" cy="746" r="11" fill="#b3261e"/>
+<text x="1264" y="750" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">9</text>
+<rect x="24" y="838" width="1232" height="210" rx="4" fill="#f4f6f8" stroke="#9aa7b2" stroke-width="1.5"/>
+<text x="44" y="870" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#0e4c92" text-anchor="start">H2  Where we work</text>
+<text x="44" y="890" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#9aa7b2" text-anchor="start">two-column tick list of suburbs</text>
+<rect x="44.0" y="908" width="268" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="342.0" y="908" width="268" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="44.0" y="930" width="268" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="342.0" y="930" width="268" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="44.0" y="952" width="268" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="342.0" y="952" width="268" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<text x="660.0" y="870" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#0e4c92" text-anchor="start">H2  Licences and cover</text>
+<rect x="660.0" y="888" width="576.0" height="30" rx="4" fill="#ffffff" stroke="#9aa7b2" stroke-width="1.5"/>
+<text x="674.0" y="908" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#0e4c92" text-anchor="start">PIRB registration</text>
+<text x="1214.0" y="908" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#0e4c92" text-anchor="end">+</text>
+<rect x="660.0" y="924" width="576.0" height="30" rx="4" fill="#ffffff" stroke="#9aa7b2" stroke-width="1.5"/>
+<text x="674.0" y="944" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#0e4c92" text-anchor="start">Public liability insurance</text>
+<text x="1214.0" y="944" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#0e4c92" text-anchor="end">+</text>
+<rect x="660.0" y="960" width="576.0" height="30" rx="4" fill="#ffffff" stroke="#9aa7b2" stroke-width="1.5"/>
+<text x="674.0" y="980" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#0e4c92" text-anchor="start">Gas practitioner authorisation</text>
+<text x="1214.0" y="980" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#0e4c92" text-anchor="end">+</text>
+<rect x="660.0" y="996" width="576.0" height="30" rx="4" fill="#ffffff" stroke="#9aa7b2" stroke-width="1.5"/>
+<text x="674.0" y="1016" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#0e4c92" text-anchor="start">Workmanship guarantee</text>
+<text x="1214.0" y="1016" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#0e4c92" text-anchor="end">+</text>
+<text x="660.0" y="1038" font-family="Helvetica, Arial, sans-serif" font-size="9" font-weight="700" fill="#b3261e" text-anchor="start">&lt;details&gt; / &lt;summary&gt; accordion, no JavaScript</text>
+<circle cx="1264" cy="948" r="11" fill="#b3261e"/>
+<text x="1264" y="952" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#ffffff" text-anchor="middle">10</text>
+<rect x="24" y="1066" width="1232" height="96" rx="4" fill="#0e4c92" stroke="#0e4c92" stroke-width="1.5"/>
+<text x="640.0" y="1108" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle">Ready when you are</text>
+<rect x="470.0" y="1124" width="160" height="26" rx="5" fill="#ffffff" stroke="#ffffff" stroke-width="1.5"/>
+<text x="550.0" y="1141" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#0e4c92" text-anchor="middle">Book a plumber</text>
+<rect x="650.0" y="1124" width="160" height="26" rx="5" fill="#0e4c92" stroke="#ffffff" stroke-width="1.5"/>
+<text x="730.0" y="1141" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#ffffff" text-anchor="middle">Ask a question</text>
+<rect x="24" y="1178" width="1232" height="150" rx="4" fill="#d5dde5" stroke="#9aa7b2" stroke-width="1.5"/>
+<text x="44.0" y="1200" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#0e4c92" text-anchor="start">Business summary</text>
+<rect x="44.0" y="1210" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="44.0" y="1221" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="44.0" y="1232" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="44.0" y="1243" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<text x="347.0" y="1200" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#0e4c92" text-anchor="start">Address + phone</text>
+<rect x="347.0" y="1210" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="347.0" y="1221" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="347.0" y="1232" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="347.0" y="1243" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<text x="650.0" y="1200" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#0e4c92" text-anchor="start">Opening hours</text>
+<rect x="650.0" y="1210" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="650.0" y="1221" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="650.0" y="1232" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="650.0" y="1243" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<text x="953.0" y="1200" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#0e4c92" text-anchor="start">Footer site map</text>
+<rect x="953.0" y="1210" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="953.0" y="1221" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="953.0" y="1232" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<rect x="953.0" y="1243" width="241" height="6" rx="3" fill="#9aa7b2" opacity="0.5"/>
+<text x="44" y="1314" font-family="Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#9aa7b2" text-anchor="start">(c) 2026 John&#x27;s Plumbing Services  |  Built by Asemahle, WEDE5020</text>
+</g></svg>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<!--
+  ============================================================================
+  FILE:     services.html
+  PROJECT:  John's Plumbing Services - WEDE5020 Portfolio of Evidence
+  AUTHOR:   Asemahle
+  PURPOSE:  The commercial heart of the site. Lists every service in detail,
+            states what is and is not included, and publishes indicative
+            pricing so visitors can decide before they phone.
+  NOTE:     Each service <article> carries an id (e.g. id="leak-detection") so
+            that links such as services.html#leak-detection from the home page
+            jump straight to that service.
+  ============================================================================
+-->
+<html lang="en-ZA">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plumbing services and prices in Pretoria: leak detection, geyser installation, blocked drains, bathroom and kitchen fittings, gas installations and 24/7 emergency call-outs.">
+  <meta name="keywords" content="plumbing prices Pretoria, geyser installation cost, blocked drain jetting, leak detection, gas certificate of compliance, emergency plumber">
+  <meta name="author" content="John's Plumbing Services">
+
+  <title>Services and prices | John's Plumbing Services</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ===================== SITE HEADER ==================================== -->
+  <header class="site-header">
+    <div class="wrapper site-header__bar">
+      <a class="brand" href="index.html">
+        <img class="brand__logo"
+             src="images/logo-120.png"
+             srcset="images/logo-120.png 120w, images/logo-240.png 240w"
+             sizes="(min-width: 48em) 4rem, 3rem"
+             width="120" height="118"
+             alt="John's Plumbing Services logo">
+        <span class="brand__name">John&rsquo;s Plumbing Services</span>
+      </a>
+
+      <input class="nav-toggle" type="checkbox" id="nav-toggle">
+      <label class="nav-toggle__btn" for="nav-toggle">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        <span class="nav-toggle__text">Menu</span>
+      </label>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="index.html">Home</a></li>
+          <li><a class="site-nav__link" href="about.html">About</a></li>
+          <li><a class="site-nav__link is-current" href="services.html" aria-current="page">Services</a></li>
+          <li><a class="site-nav__link" href="gallery.html">Gallery</a></li>
+          <li><a class="site-nav__link" href="contact.html">Contact</a></li>
+          <li><a class="site-nav__link site-nav__link--cta" href="booking.html">Book a plumber</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- ===================== PAGE HEADER ================================== -->
+    <section class="page-head">
+      <div class="wrapper">
+        <h1 class="page-head__title">Services and indicative prices</h1>
+        <p class="page-head__lead">
+          Every price below is what a typical job costs. The plumber confirms the
+          exact figure on site before starting, and you approve it first.
+        </p>
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol class="breadcrumb__list">
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Services</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------------------
+         ON-PAGE JUMP MENU
+         A secondary <nav> that lets the visitor skip to the service they came
+         for instead of scrolling past five they do not need.
+         ------------------------------------------------------------------ -->
+    <nav class="jump-nav" aria-label="Jump to a service">
+      <div class="wrapper">
+        <h2 class="jump-nav__heading">Jump to</h2>
+        <ul class="jump-nav__list">
+          <li><a href="#leak-detection">Leak detection</a></li>
+          <li><a href="#geysers">Geysers</a></li>
+          <li><a href="#drains">Blocked drains</a></li>
+          <li><a href="#fittings">Bathrooms &amp; kitchens</a></li>
+          <li><a href="#gas">Gas installations</a></li>
+          <li><a href="#emergency">Emergency call-outs</a></li>
+          <li><a href="#price-table">Full price list</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- =====================================================================
+         SERVICE DETAIL
+         Six <article> blocks, each one self-contained.
+         ================================================================== -->
+    <section class="section" aria-labelledby="detail-heading">
+      <div class="wrapper">
+        <h2 class="section__heading" id="detail-heading">What each service covers</h2>
+
+        <!-- SERVICE 1 ---------------------------------------------------- -->
+        <article class="service" id="leak-detection">
+          <h3 class="service__title">Leak detection and repair</h3>
+          <p class="service__price">From R650 for call-out and diagnosis</p>
+          <p>
+            A rising water bill with no visible puddle usually means a pressurised
+            line is leaking under a slab or inside a wall. We locate it with acoustic
+            listening equipment and a thermal camera before anything is opened up, so
+            the repair is one small excavation rather than a demolished floor.
+          </p>
+          <h4 class="service__sub">Included</h4>
+          <ul class="tick-list">
+            <li>Pressure test of the incoming supply</li>
+            <li>Acoustic and thermal location of the leak</li>
+            <li>Written report with photographs for your insurer</li>
+            <li>Repair quote issued before any breaking work starts</li>
+          </ul>
+          <h4 class="service__sub">Not included</h4>
+          <ul class="tick-list tick-list--cross">
+            <li>Tiling, screeding or plastering to make good</li>
+            <li>Municipal account queries or rebate applications</li>
+          </ul>
+        </article>
+
+        <!-- SERVICE 2 ---------------------------------------------------- -->
+        <article class="service" id="geysers">
+          <h3 class="service__title">Geysers and water heating</h3>
+          <p class="service__price">From R2 400 installation, geyser unit excluded</p>
+          <p>
+            We supply and install electric, gas and solar geysers, and we replace
+            failed units the same day where stock allows. A geyser replacement is
+            only legal and only insurable if the safety components go in with it,
+            so the drip tray, vacuum breakers, pressure control valve and overflow
+            are quoted as part of the job rather than added later.
+          </p>
+          <h4 class="service__sub">Included</h4>
+          <ul class="tick-list">
+            <li>Removal and disposal of the old unit</li>
+            <li>New drip tray, vacuum breakers and pressure control valve</li>
+            <li>Electrical isolation and reconnection by a qualified hand</li>
+            <li>PIRB Certificate of Compliance lodged for you</li>
+          </ul>
+          <h4 class="service__sub">Not included</h4>
+          <ul class="tick-list tick-list--cross">
+            <li>The geyser unit itself, which you may supply or buy through us</li>
+            <li>Roof or ceiling repairs caused by the original burst</li>
+          </ul>
+        </article>
+
+        <!-- SERVICE 3 ---------------------------------------------------- -->
+        <article class="service" id="drains">
+          <h3 class="service__title">Blocked drains and sewer lines</h3>
+          <p class="service__price">From R850 per drain line</p>
+          <p>
+            Rodding clears a blockage for a week. Jetting clears the pipe wall and
+            keeps it clear for years. We use a high-pressure jetting rig on kitchen,
+            bathroom and main sewer lines, and we run a CCTV camera afterwards so you
+            can see whether the cause was grease, roots or a collapsed section.
+          </p>
+          <h4 class="service__sub">Included</h4>
+          <ul class="tick-list">
+            <li>High-pressure jetting of the affected line</li>
+            <li>CCTV inspection and a copy of the footage</li>
+            <li>Gully and inspection-eye clean-up</li>
+            <li>Written recommendation if the pipe needs replacing</li>
+          </ul>
+        </article>
+
+        <!-- SERVICE 4 ---------------------------------------------------- -->
+        <article class="service" id="fittings">
+          <h3 class="service__title">Bathroom and kitchen fittings</h3>
+          <p class="service__price">From R450 per fitting, or R3 900 per full bathroom</p>
+          <p>
+            Taps, mixers, toilets, basins, baths, showers, dishwashers and washing
+            machine points. For renovations we work to the tiler's programme so the
+            first fix is in before the walls close and the second fix happens once
+            the tiling is cured.
+          </p>
+          <h4 class="service__sub">Included</h4>
+          <ul class="tick-list">
+            <li>First fix pipework and set-out for the tiler</li>
+            <li>Second fix of all sanitaryware and mixers</li>
+            <li>Pressure and leak test on completion</li>
+            <li>Removal of packaging and old fittings</li>
+          </ul>
+        </article>
+
+        <!-- SERVICE 5 ---------------------------------------------------- -->
+        <article class="service" id="gas">
+          <h3 class="service__title">Gas installations</h3>
+          <p class="service__price">From R1 950 plus a R750 Certificate of Compliance</p>
+          <p>
+            Gas hobs, gas geysers and bottle installations, carried out by an
+            SAQCC-registered gas practitioner. A gas Certificate of Compliance is a
+            legal requirement when a property is sold, and most insurers will decline
+            a gas-related claim without one.
+          </p>
+          <h4 class="service__sub">Included</h4>
+          <ul class="tick-list">
+            <li>Regulator, hose and bottle housing to SANS 10087</li>
+            <li>Leak test and appliance commissioning</li>
+            <li>SAQCC Gas Certificate of Compliance</li>
+          </ul>
+        </article>
+
+        <!-- SERVICE 6 ---------------------------------------------------- -->
+        <article class="service" id="emergency">
+          <h3 class="service__title">Emergency call-outs</h3>
+          <p class="service__price">R1 150 after hours, R650 during business hours</p>
+          <p>
+            Burst pipes, a geyser emptying into a ceiling, or sewage backing up into
+            a shower. The after-hours line is answered by a plumber, not a call
+            centre, and our target is to be on site within 60 minutes anywhere in the
+            standard service area.
+          </p>
+          <h4 class="service__sub">Included</h4>
+          <ul class="tick-list">
+            <li>Attendance and immediate make-safe</li>
+            <li>First hour of labour on site</li>
+            <li>Temporary isolation so you can use the rest of the property</li>
+          </ul>
+          <p class="service__note">
+            <strong>Before we arrive:</strong> close the main stopcock at the meter and
+            switch the geyser off at the distribution board.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------------------
+         PRICE TABLE
+         A <table> is the correct element here because this is genuinely
+         tabular data: each row is a service, each column an attribute.
+         <caption>, <thead>, <tbody> and scope="col"/"row" make the table
+         readable to screen readers.
+         ------------------------------------------------------------------ -->
+    <section class="section section--tinted" id="price-table" aria-labelledby="pricing-heading">
+      <div class="wrapper">
+        <h2 class="section__heading" id="pricing-heading">Price list at a glance</h2>
+        <p class="section__intro">
+          Prices include VAT and apply inside the standard 35km service area.
+          Valid until <time datetime="2026-12-31">31 December 2026</time>.
+        </p>
+
+        <!-- The table is wrapped so it can scroll sideways on a narrow phone
+             instead of breaking the page layout. -->
+        <div class="table-scroll">
+          <table class="price-table">
+            <caption>Indicative plumbing prices, including VAT</caption>
+            <thead>
+              <tr>
+                <th scope="col">Service</th>
+                <th scope="col">Typical price</th>
+                <th scope="col">Usual duration</th>
+                <th scope="col">Guarantee</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Standard call-out and diagnosis</th>
+                <td>R650</td>
+                <td>1 hour</td>
+                <td>&mdash;</td>
+              </tr>
+              <tr>
+                <th scope="row">Leak detection, acoustic and thermal</th>
+                <td>R1 250</td>
+                <td>2 &ndash; 3 hours</td>
+                <td>12 months</td>
+              </tr>
+              <tr>
+                <th scope="row">Geyser replacement, 150L electric</th>
+                <td>R2 400 labour</td>
+                <td>4 hours</td>
+                <td>12 months labour</td>
+              </tr>
+              <tr>
+                <th scope="row">Drain jetting and CCTV, single line</th>
+                <td>R850</td>
+                <td>1 &ndash; 2 hours</td>
+                <td>6 months</td>
+              </tr>
+              <tr>
+                <th scope="row">Tap or mixer replacement</th>
+                <td>R450</td>
+                <td>45 minutes</td>
+                <td>12 months</td>
+              </tr>
+              <tr>
+                <th scope="row">Full bathroom second fix</th>
+                <td>R3 900</td>
+                <td>1 &ndash; 2 days</td>
+                <td>12 months</td>
+              </tr>
+              <tr>
+                <th scope="row">Gas hob installation and CoC</th>
+                <td>R2 700</td>
+                <td>3 hours</td>
+                <td>12 months</td>
+              </tr>
+              <tr>
+                <th scope="row">After-hours emergency call-out</th>
+                <td>R1 150</td>
+                <td>First hour included</td>
+                <td>12 months</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="section__note">
+          <small>
+            Parts and materials are charged at cost plus 15%. Travel outside the
+            standard service area is R9 per kilometre. Written quotations are free.
+          </small>
+        </p>
+      </div>
+    </section>
+
+    <!-- ---------------------------------------------------------------------
+         CLOSING CALL TO ACTION
+         ------------------------------------------------------------------ -->
+    <section class="cta" aria-labelledby="services-cta-heading">
+      <div class="wrapper cta__inner">
+        <h2 class="cta__heading" id="services-cta-heading">Not sure which service you need?</h2>
+        <p class="cta__text">Describe the problem on the booking form and we will tell you.</p>
+        <p>
+          <a class="button button--primary" href="booking.html">Book a plumber</a>
+          <a class="button button--ghost" href="gallery.html">See the work</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== SITE FOOTER ==================================== -->
+  <footer class="site-footer">
+    <div class="wrapper site-footer__grid">
+
+      <div class="site-footer__col">
+        <h2 class="site-footer__heading">John&rsquo;s Plumbing Services</h2>
+        <p>Licensed and insured plumbing for homes and small businesses across the Tshwane metro.</p>
+        <p>PIRB registration 2015/PL/0483</p>
+      </div>
+
+      <div class="site-footer__col">
+        <h2 class="site-footer__heading">Find us</h2>
+        <address class="site-footer__address">
+          14 Rigel Avenue, Waterkloof Ridge<br>
+          Pretoria, 0181<br>
+          <a href="tel:+27123456789">012 345 6789</a><br>
+          <a href="mailto:info@johnsplumbing.co.za">info@johnsplumbing.co.za</a>
+        </address>
+      </div>
+
+      <div class="site-footer__col">
+        <h2 class="site-footer__heading">Opening hours</h2>
+        <dl class="hours">
+          <dt>Mon &ndash; Fri</dt><dd>07:00 &ndash; 17:00</dd>
+          <dt>Saturday</dt><dd>08:00 &ndash; 13:00</dd>
+          <dt>Sunday</dt><dd>Emergency call-outs only</dd>
+          <dt>Emergencies</dt><dd>24 hours, every day</dd>
+        </dl>
+      </div>
+
+      <div class="site-footer__col">
+        <h2 class="site-footer__heading">Site map</h2>
+        <nav aria-label="Footer navigation">
+          <ul class="site-footer__list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="booking.html">Book a plumber</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+
+    <div class="wrapper site-footer__legal">
+      <p><small>&copy; <time datetime="2026">2026</time> John&rsquo;s Plumbing Services. All rights reserved.</small></p>
+      <p><small>Built by Asemahle for WEDE5020 &mdash; The IIE Rosebank College.</small></p>
+    </div>
+  </footer>
+
+</body>
+</html>

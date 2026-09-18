@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html lang="en-ZA">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Book a plumber online in Pretoria. Choose a service, pick a two-hour slot, and John's Plumbing Services will confirm within one working hour.">
+  <meta name="keywords" content="book plumber online Pretoria, plumbing appointment, schedule plumber Gauteng, emergency booking">
+  <meta name="author" content="John's Plumbing Services">
+
+  <title>Book a plumber | John's Plumbing Services</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!--  SITE HEADER  -->
+  <header class="site-header">
+    <div class="wrapper site-header__bar">
+      <a class="brand" href="index.html">
+        <img class="brand__logo"
+             src="images/logo-120.png"
+             srcset="images/logo-120.png 120w, images/logo-240.png 240w"
+             sizes="(min-width: 48em) 4rem, 3rem"
+             width="120" height="118"
+             alt="John's Plumbing Services logo">
+        <span class="brand__name">John&rsquo;s Plumbing Services</span>
+      </a>
+
+      <input class="nav-toggle" type="checkbox" id="nav-toggle">
+      <label class="nav-toggle__btn" for="nav-toggle">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        <span class="nav-toggle__text">Menu</span>
+      </label>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="index.html">Home</a></li>
+          <li><a class="site-nav__link" href="about.html">About</a></li>
+          <li><a class="site-nav__link" href="services.html">Services</a></li>
+          <li><a class="site-nav__link" href="gallery.html">Gallery</a></li>
+          <li><a class="site-nav__link" href="contact.html">Contact</a></li>
+          <li><a class="site-nav__link site-nav__link--cta is-current" href="booking.html" aria-current="page">Book a plumber</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!--  PAGE HEADER  -->
+    <section class="page-head">
+      <div class="wrapper">
+        <h1 class="page-head__title">Book a plumber</h1>
+        <p class="page-head__lead">
+          Tell us what is wrong and when suits you. We confirm your two-hour slot
+          within one working hour.
+        </p>
+
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol class="breadcrumb__list">
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Book a plumber</li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- EMERGENCY DIVERSION -->
+    <aside class="notice" aria-label="Emergency contact">
+      <div class="wrapper notice__inner">
+        <p class="notice__text">
+          <strong>Is this an emergency?</strong> Do not use the form. Close the main
+          stopcock and call the 24-hour line so a plumber is dispatched immediately.
+        </p>
+        <a class="button button--alert" href="tel:+27823456789">Call 082 345 6789</a>
+      </div>
+    </aside>
+
+    <!-- BOOKING LAYOUT -->
+    <section class="section" aria-labelledby="booking-heading">
+      <div class="wrapper booking-layout">
+
+        <!-- THE BOOKING FORM  -->
+        <div class="booking-form">
+          <form class="form">
+            <h2 class="section__heading" id="booking-heading">Appointment request</h2>
+            <p class="form__intro">
+              Four short steps. Fields marked with an asterisk are required.
+            </p>
+
+            <!-- STEP 1  -->
+            <fieldset class="form__group">
+              <legend class="form__legend">1. Who should we contact?</legend>
+
+              <div class="field-row">
+                <p class="field">
+                  <label class="field__label" for="book-name">Full name <span aria-hidden="true">*</span></label>
+                  <input class="field__input" type="text" id="book-name" name="name"
+                         required autocomplete="name" placeholder="Sipho Dlamini">
+                </p>
+
+                <p class="field">
+                  <label class="field__label" for="book-phone">Mobile number <span aria-hidden="true">*</span></label>
+                  <input class="field__input" type="tel" id="book-phone" name="phone"
+                         required autocomplete="tel" placeholder="082 345 6789"
+                         pattern="[0-9+()\s-]{10,15}" aria-describedby="book-phone-hint">
+                  <small class="field__hint" id="book-phone-hint">We send the confirmation by SMS or WhatsApp.</small>
+                </p>
+              </div>
+
+              <p class="field">
+                <label class="field__label" for="book-email">Email address <span aria-hidden="true">*</span></label>
+                <input class="field__input" type="email" id="book-email" name="email"
+                       required autocomplete="email" placeholder="you@example.co.za">
+              </p>
+            </fieldset>
+
+            <!-- STEP 2  -->
+            <fieldset class="form__group">
+              <legend class="form__legend">2. Where is the property?</legend>
+
+              <p class="field">
+                <label class="field__label" for="book-street">Street address <span aria-hidden="true">*</span></label>
+                <input class="field__input" type="text" id="book-street" name="street"
+                       required autocomplete="street-address" placeholder="27 Rooibos Street">
+              </p>
+
+              <div class="field-row">
+                <p class="field">
+                  <label class="field__label" for="book-suburb">Suburb <span aria-hidden="true">*</span></label>
+                  <input class="field__input" type="text" id="book-suburb" name="suburb"
+                         required autocomplete="address-level2" placeholder="Garsfontein">
+                </p>
+
+                <p class="field">
+                  <label class="field__label" for="book-postcode">Postal code</label>
+                  <!-- inputmode -->
+                  <input class="field__input" type="text" id="book-postcode" name="postcode"
+                         autocomplete="postal-code" inputmode="numeric"
+                         pattern="[0-9]{4}" maxlength="4" placeholder="0081">
+                </p>
+              </div>
+
+            
+              <fieldset class="field-set-inner">
+                <legend class="field__label">Property type <span aria-hidden="true">*</span></legend>
+                <div class="radio-row">
+                  <span class="radio">
+                    <input type="radio" id="prop-house" name="property" value="house" required checked>
+                    <label for="prop-house">House</label>
+                  </span>
+                  <span class="radio">
+                    <input type="radio" id="prop-flat" name="property" value="flat">
+                    <label for="prop-flat">Flat or townhouse</label>
+                  </span>
+                  <span class="radio">
+                    <input type="radio" id="prop-business" name="property" value="business">
+                    <label for="prop-business">Business premises</label>
+                  </span>
+                </div>
+              </fieldset>
+            </fieldset>
+
+            <!-- STEP 3 -->
+            <fieldset class="form__group">
+              <legend class="form__legend">3. What do you need done?</legend>
+
+              <p class="field">
+                <label class="field__label" for="book-service">Service <span aria-hidden="true">*</span></label>
+                <select class="field__input" id="book-service" name="service" required>
+                  <option value="">Choose a service</option>
+                  <option value="leak-detection">Leak detection and repair</option>
+                  <option value="geyser">Geyser installation or replacement</option>
+                  <option value="drains">Blocked drain or sewer line</option>
+                  <option value="fittings">Bathroom or kitchen fittings</option>
+                  <option value="gas">Gas installation or certificate</option>
+                  <option value="maintenance">General maintenance or inspection</option>
+                  <option value="other">Something else</option>
+                </select>
+              </p>
+
+              <fieldset class="field-set-inner">
+                <legend class="field__label">How urgent is it? <span aria-hidden="true">*</span></legend>
+                <div class="radio-row radio-row--stack">
+                  <span class="radio">
+                    <input type="radio" id="urg-today" name="urgency" value="today" required>
+                    <label for="urg-today">Today if possible &mdash; it is getting worse</label>
+                  </span>
+                  <span class="radio">
+                    <input type="radio" id="urg-week" name="urgency" value="week" checked>
+                    <label for="urg-week">Within a week</label>
+                  </span>
+                  <span class="radio">
+                    <input type="radio" id="urg-flexible" name="urgency" value="flexible">
+                    <label for="urg-flexible">Flexible &mdash; whenever you are nearby</label>
+                  </span>
+                </div>
+              </fieldset>
+
+              <p class="field">
+                <label class="field__label" for="book-notes">Describe the problem</label>
+                <textarea class="field__input field__input--area" id="book-notes" name="notes" rows="5"
+                          placeholder="For example: the toilet in the main bathroom runs constantly and the cistern will not refill properly."></textarea>
+                <small class="field__hint">The more detail you give, the more accurate the price we bring with us.</small>
+              </p>
+            </fieldset>
+
+            <!-- STEP 4 -->
+            <fieldset class="form__group">
+              <legend class="form__legend">4. When suits you?</legend>
+
+              <div class="field-row">
+                <p class="field">
+                  <label class="field__label" for="book-date">Preferred date <span aria-hidden="true">*</span></label>
+                  
+                  <input class="field__input" type="date" id="book-date" name="date"
+                         required min="2026-01-01">
+                </p>
+
+                <p class="field">
+                  <label class="field__label" for="book-slot">Preferred slot <span aria-hidden="true">*</span></label>
+                  <select class="field__input" id="book-slot" name="slot" required>
+                    <option value="">Choose a slot</option>
+                    <option value="08-10">08:00 &ndash; 10:00</option>
+                    <option value="10-12">10:00 &ndash; 12:00</option>
+                    <option value="12-14">12:00 &ndash; 14:00</option>
+                    <option value="14-16">14:00 &ndash; 16:00</option>
+                    <option value="16-18">16:00 &ndash; 18:00</option>
+                  </select>
+                </p>
+              </div>
+
+              <p class="field field--check">
+                <input class="field__check" type="checkbox" id="book-access" name="access">
+                <label class="field__label field__label--inline" for="book-access">
+                  There is a gate code, guard house or pet we should know about &mdash; I will explain in the notes.
+                </label>
+              </p>
+
+              <p class="field field--check">
+                <input class="field__check" type="checkbox" id="book-consent" name="consent" required>
+                <label class="field__label field__label--inline" for="book-consent">
+                  I understand the plumber will quote on site and that no work starts before I approve the price. <span aria-hidden="true">*</span>
+                </label>
+              </p>
+            </fieldset>
+
+            <p class="form__actions">
+              <button class="button button--primary" type="submit">Request this booking</button>
+              <button class="button button--ghost" type="reset">Start again</button>
+            </p>
+
+            <p class="form__footnote">
+              <small>
+                Submitting this form requests a slot; it does not confirm one. You will
+                receive a confirmation message before a plumber is dispatched.
+              </small>
+            </p>
+
+          </form>
+        </div>
+
+        <!-- SUPPORTING SIDEBAR -->
+        <aside class="booking-aside" aria-labelledby="booking-aside-heading">
+          <h2 class="section__heading" id="booking-aside-heading">What happens next</h2>
+
+          <ol class="steps steps--compact">
+            <li class="steps__item">
+              <h3 class="steps__title">Within one working hour</h3>
+              <p>Lerato calls or messages you to confirm the slot and the call-out fee.</p>
+            </li>
+            <li class="steps__item">
+              <h3 class="steps__title">The morning of the visit</h3>
+              <p>You get the plumber&rsquo;s name and a narrowed arrival window.</p>
+            </li>
+            <li class="steps__item">
+              <h3 class="steps__title">On site</h3>
+              <p>The fault is diagnosed and priced. Nothing starts until you say yes.</p>
+            </li>
+            <li class="steps__item">
+              <h3 class="steps__title">Afterwards</h3>
+              <p>Invoice, photographs and any compliance certificate arrive by email the same day.</p>
+            </li>
+          </ol>
+
+          <div class="callout">
+            <h3 class="callout__title">Bring the paperwork</h3>
+            <p>
+              If you are claiming from insurance, have the policy number ready. We can
+              write the report in the format most South African insurers ask for.
+            </p>
+          </div>
+
+          <div class="callout">
+            <h3 class="callout__title">Prefer to talk?</h3>
+            <p>
+              Call the office on <a href="tel:+27123456789">012 345 6789</a> between
+              07:00 and 17:00, or use the
+              <a href="contact.html">enquiry form</a> for anything that is not a booking.
+            </p>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    <div class="wrapper site-footer__grid">
+
+      <div class="site-footer__col">
+        <h2 class="site-footer__heading">John&rsquo;s Plumbing Services</h2>
+        <p>Licensed and insured plumbing for homes and small businesses across the Tshwane metro.</p>
+        <p>PIRB registration 2015/PL/0483</p>
+      </div>
+
+      <div class="site-footer__col">
+        <h2 class="site-footer__heading">Find us</h2>
+        <address class="site-footer__address">
+          14 Rigel Avenue, Waterkloof Ridge<br>
+          Pretoria, 0181<br>
+          <a href="tel:+27123456789">012 345 6789</a><br>
+          <a href="mailto:info@johnsplumbing.co.za">info@johnsplumbing.co.za</a>
+        </address>
+      </div>
+
+      <div class="site-footer__col">
+        <h2 class="site-footer__heading">Opening hours</h2>
+        <dl class="hours">
+          <dt>Mon &ndash; Fri</dt><dd>07:00 &ndash; 17:00</dd>
+          <dt>Saturday</dt><dd>08:00 &ndash; 13:00</dd>
+          <dt>Sunday</dt><dd>Emergency call-outs only</dd>
+          <dt>Emergencies</dt><dd>24 hours, every day</dd>
+        </dl>
+      </div>
+
+      <div class="site-footer__col">
+        <h2 class="site-footer__heading">Site map</h2>
+        <nav aria-label="Footer navigation">
+          <ul class="site-footer__list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="booking.html">Book a plumber</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+
+    <div class="wrapper site-footer__legal">
+      <p><small>&copy; <time datetime="2026">2026</time> John&rsquo;s Plumbing Services. All rights reserved.</small></p>
+      <p><small>Built by Asemahle for WEDE5020 &mdash; The IIE Rosebank College.</small></p>
+    </div>
+  </footer>
+
+</body>
+</html>

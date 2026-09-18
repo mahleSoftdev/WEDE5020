@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1024" width="1500" height="1024"><rect width="1500" height="1080" fill="#ffffff"/>
+<text x="750.0" y="40" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#2a3742" text-anchor="middle">John&#x27;s Plumbing Services - Site Map</text>
+<text x="750.0" y="64" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#9aa7b2" text-anchor="middle">www.johnsplumbing.co.za   |   6 pages, flat two-level structure, maximum depth 1 click from Home</text>
+<rect x="610.0" y="90" width="280" height="52" rx="6" fill="#093566" stroke="#0e4c92" stroke-width="2"/>
+<text x="750.0" y="114" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">www.johnsplumbing.co.za</text>
+<text x="750.0" y="132" font-family="Helvetica, Arial, sans-serif" font-size="9" font-weight="400" fill="#c9ddf2" text-anchor="middle">root domain, HTTPS, www redirect</text>
+<rect x="620.0" y="190" width="260" height="60" rx="6" fill="#0e4c92" stroke="#0e4c92" stroke-width="2"/>
+<text x="750.0" y="214" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">HOME</text>
+<text x="750.0" y="234" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#c9ddf2" text-anchor="middle">index.html   (level 0)</text>
+<path d="M750.0 142 L750.0 190" stroke="#0e4c92" stroke-width="3" fill="none"/>
+<path d="M750.0 250 V290.0 H206.0 V330" stroke="#2d9cdb" stroke-width="2" fill="none"/>
+<rect x="81.0" y="330" width="250" height="58" rx="6" fill="#ffffff" stroke="#2d9cdb" stroke-width="2"/>
+<text x="206.0" y="354" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#0e4c92" text-anchor="middle">ABOUT</text>
+<text x="206.0" y="373" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#9aa7b2" text-anchor="middle">about.html   (level 1)</text>
+<path d="M206.0 388 L206.0 404" stroke="#9aa7b2" stroke-width="1.5" fill="none"/>
+<rect x="99.0" y="398" width="214" height="26" rx="4" fill="#eef1f4" stroke="#9aa7b2" stroke-width="1"/>
+<text x="206.0" y="416" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2a3742" text-anchor="middle">Our story</text>
+<rect x="99.0" y="430" width="214" height="26" rx="4" fill="#eef1f4" stroke="#9aa7b2" stroke-width="1"/>
+<text x="206.0" y="448" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2a3742" text-anchor="middle">Mission / vision / values</text>
+<rect x="99.0" y="462" width="214" height="26" rx="4" fill="#eef1f4" stroke="#9aa7b2" stroke-width="1"/>
+<text x="206.0" y="480" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2a3742" text-anchor="middle">The team (4)</text>
+<rect x="99.0" y="494" width="214" height="26" rx="4" fill="#eef1f4" stroke="#9aa7b2" stroke-width="1"/>
+<text x="206.0" y="512" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2a3742" text-anchor="middle">Service area</text>
+<rect x="99.0" y="526" width="214" height="26" rx="4" fill="#eef1f4" stroke="#9aa7b2" stroke-width="1"/>
+<text x="206.0" y="544" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2a3742" text-anchor="middle">Licences (details)</text>
+<path d="M750.0 250 V290.0 H478.0 V330" stroke="#2d9cdb" stroke-width="2" fill="none"/>
+<rect x="353.0" y="330" width="250" height="58" rx="6" fill="#ffffff" stroke="#2d9cdb" stroke-width="2"/>
+<text x="478.0" y="354" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#0e4c92" text-anchor="middle">SERVICES</text>
+<text x="478.0" y="373" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#9aa7b2" text-anchor="middle">services.html   (level 1)</text>
+<path d="M478.0 388 L478.0 404" stroke="#9aa7b2" stroke-width="1.5" fill="none"/>
+<rect x="371.0" y="398" width="214" height="26" rx="4" fill="#eef1f4" stroke="#9aa7b2" stroke-width="1"/>
+<text x="478.0" y="416" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2a3742" text-anchor="middle">Jump navigation</text>
+<rect x="371.0" y="430" width="214" height="26" rx="4" fill="#eef1f4" stroke="#9aa7b2" stroke-width="1"/>
+<text x="478.0" y="448" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2a3742" text-anchor="middle">6 service articles</text>
+<rect x="371.0" y="462" width="214" height="26" rx="4" fill="#eef1f4" stroke="#9aa7b2" stroke-width="1"/>
+<text x="478.0" y="480" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2a3742" text-anchor="middle">#leak-detection</text>
+<rect x="371.0" y="494" width="214" height="26" rx="4" fill="#eef1f4" stroke="#9aa7b2" stroke-width="1"/>
+<text x="478.0" y="512" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2a3742" text-anchor="middle">#geysers  #drains</text>
+<rect x="371.0" y="526" width="214" height="26" rx="4" fill="#eef1f4" stroke="#9aa7b2" stroke-width="1"/>
+<text x="478.0" y="544" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2a3742" text-anchor="middle">#fittings  #gas</text>
+<rect x="371.0" y="558" width="214" height="26" rx="4" fill="#eef1f4" stroke="#9aa7b2" stroke-width="1"/>
+<text x="478.0" y="576" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2a3742" text-anchor="middle">#emergency</text>
+<rect x="371.0" y="590" width="214" height="26" rx="4" fill="#eef1f4" stroke="#9aa7b2" stroke-width="1"/>
+<text x="478.0" y="608" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2a3742" text-anchor="middle">#price-table</text>
+<path d="M750.0 250 V290.0 H750.0 V330" stroke="#2d9cdb" stroke-width="2" fill="none"/>
+<rect x="625.0" y="330" width="250" height="58" rx="6" fill="#ffffff" stroke="#2d9cdb" stroke-width="2"/>
+<text x="750.0" y="354" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#0e4c92" text-anchor="middle">GALLERY</text>
+<text x="750.0" y="373" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#9aa7b2" text-anchor="middle">gallery.html   (level 1)</text>
+<path d="M750.0 388 L750.0 404" stroke="#9aa7b2" stroke-width="1.5" fill="none"/>
+<rect x="643.0" y="398" width="214" height="26" rx="4" fill="#eef1f4" stroke="#9aa7b2" stroke-width="1"/>
+<text x="750.0" y="416" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2a3742" text-anchor="middle">6 job figures</text>
+<rect x="643.0" y="430" width="214" height="26" rx="4" fill="#eef1f4" stroke="#9aa7b2" stroke-width="1"/>
+<text x="750.0" y="448" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2a3742" text-anchor="middle">Captions + dates</text>
+<rect x="643.0" y="462" width="214" height="26" rx="4" fill="#eef1f4" stroke="#9aa7b2" stroke-width="1"/>
+<text x="750.0" y="480" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2a3742" text-anchor="middle">Why we photograph</text>
+<rect x="643.0" y="494" width="214" height="26" rx="4" fill="#eef1f4" stroke="#9aa7b2" stroke-width="1"/>
+<text x="750.0" y="512" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2a3742" text-anchor="middle">Consent note</text>
+<path d="M750.0 250 V290.0 H1022.0 V330" stroke="#2d9cdb" stroke-width="2" fill="none"/>
+<rect x="897.0" y="330" width="250" height="58" rx="6" fill="#ffffff" stroke="#2d9cdb" stroke-width="2"/>
+<text x="1022.0" y="354" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#0e4c92" text-anchor="middle">CONTACT</text>
+<text x="1022.0" y="373" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#9aa7b2" text-anchor="middle">contact.html   (level 1)</text>
+<path d="M1022.0 388 L1022.0 404" stroke="#9aa7b2" stroke-width="1.5" fill="none"/>
+<rect x="915.0" y="398" width="214" height="26" rx="4" fill="#eef1f4" stroke="#9aa7b2" stroke-width="1"/>
+<text x="1022.0" y="416" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2a3742" text-anchor="middle">Office address</text>
+<rect x="915.0" y="430" width="214" height="26" rx="4" fill="#eef1f4" stroke="#9aa7b2" stroke-width="1"/>
+<text x="1022.0" y="448" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2a3742" text-anchor="middle">Emergency line</text>
+<rect x="915.0" y="462" width="214" height="26" rx="4" fill="#eef1f4" stroke="#9aa7b2" stroke-width="1"/>
+<text x="1022.0" y="480" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2a3742" text-anchor="middle">Opening hours</text>
+<rect x="915.0" y="494" width="214" height="26" rx="4" fill="#eef1f4" stroke="#9aa7b2" stroke-width="1"/>
+<text x="1022.0" y="512" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2a3742" text-anchor="middle">Enquiry form</text>
+<rect x="915.0" y="526" width="214" height="26" rx="4" fill="#eef1f4" stroke="#9aa7b2" stroke-width="1"/>
+<text x="1022.0" y="544" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2a3742" text-anchor="middle">FAQ accordion</text>
+<path d="M750.0 250 V290.0 H1294.0 V330" stroke="#2d9cdb" stroke-width="2" fill="none"/>
+<rect x="1169.0" y="330" width="250" height="58" rx="6" fill="#ffffff" stroke="#2d9cdb" stroke-width="2"/>
+<text x="1294.0" y="354" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="700" fill="#0e4c92" text-anchor="middle">BOOKING</text>
+<text x="1294.0" y="373" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#9aa7b2" text-anchor="middle">booking.html   (level 1)</text>
+<path d="M1294.0 388 L1294.0 404" stroke="#9aa7b2" stroke-width="1.5" fill="none"/>
+<rect x="1187.0" y="398" width="214" height="26" rx="4" fill="#eef1f4" stroke="#9aa7b2" stroke-width="1"/>
+<text x="1294.0" y="416" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2a3742" text-anchor="middle">Emergency diversion</text>
+<rect x="1187.0" y="430" width="214" height="26" rx="4" fill="#eef1f4" stroke="#9aa7b2" stroke-width="1"/>
+<text x="1294.0" y="448" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2a3742" text-anchor="middle">4-step form</text>
+<rect x="1187.0" y="462" width="214" height="26" rx="4" fill="#eef1f4" stroke="#9aa7b2" stroke-width="1"/>
+<text x="1294.0" y="480" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2a3742" text-anchor="middle">What happens next</text>
+<rect x="1187.0" y="494" width="214" height="26" rx="4" fill="#eef1f4" stroke="#9aa7b2" stroke-width="1"/>
+<text x="1294.0" y="512" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2a3742" text-anchor="middle">Sidebar callouts</text>
+<rect x="60" y="678" width="1380" height="110" rx="8" fill="#f4f6f8" stroke="#9aa7b2" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="750.0" y="704" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#0e4c92" text-anchor="middle">GLOBAL ELEMENTS - present on all six pages</text>
+<rect x="100.0" y="718" width="413.3333333333333" height="24" rx="4" fill="#ffffff" stroke="#9aa7b2" stroke-width="1"/>
+<text x="306.66666666666663" y="735" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2a3742" text-anchor="middle">Skip link -&gt; #main-content</text>
+<rect x="533.3333333333333" y="718" width="413.3333333333333" height="24" rx="4" fill="#ffffff" stroke="#9aa7b2" stroke-width="1"/>
+<text x="739.9999999999999" y="735" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2a3742" text-anchor="middle">Sticky &lt;header&gt; + main &lt;nav&gt; (6 links)</text>
+<rect x="966.6666666666666" y="718" width="413.3333333333333" height="24" rx="4" fill="#ffffff" stroke="#9aa7b2" stroke-width="1"/>
+<text x="1173.3333333333333" y="735" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2a3742" text-anchor="middle">Breadcrumb &lt;nav&gt; (inner pages)</text>
+<rect x="100.0" y="746" width="413.3333333333333" height="24" rx="4" fill="#ffffff" stroke="#9aa7b2" stroke-width="1"/>
+<text x="306.66666666666663" y="763" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2a3742" text-anchor="middle">&lt;footer&gt; site map (6 links)</text>
+<rect x="533.3333333333333" y="746" width="413.3333333333333" height="24" rx="4" fill="#ffffff" stroke="#9aa7b2" stroke-width="1"/>
+<text x="739.9999999999999" y="763" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2a3742" text-anchor="middle">Address + phone + hours</text>
+<rect x="966.6666666666666" y="746" width="413.3333333333333" height="24" rx="4" fill="#ffffff" stroke="#9aa7b2" stroke-width="1"/>
+<text x="1173.3333333333333" y="763" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#2a3742" text-anchor="middle">Emergency tel: link</text>
+<rect x="60" y="808" width="1380" height="86" rx="8" fill="#fff8e8" stroke="#d9a441" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="750.0" y="832" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#8a6410" text-anchor="middle">PLANNED FOR PART 3 - not built yet</text>
+<rect x="110.0" y="846" width="310.0" height="26" rx="4" fill="#ffffff" stroke="#d9a441" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="265.0" y="864" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#8a6410" text-anchor="middle">send.php (form handler)</text>
+<rect x="432.0" y="846" width="310.0" height="26" rx="4" fill="#ffffff" stroke="#d9a441" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="587.0" y="864" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#8a6410" text-anchor="middle">thank-you.html</text>
+<rect x="754.0" y="846" width="310.0" height="26" rx="4" fill="#ffffff" stroke="#d9a441" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="909.0" y="864" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#8a6410" text-anchor="middle">privacy.html</text>
+<rect x="1076.0" y="846" width="310.0" height="26" rx="4" fill="#ffffff" stroke="#d9a441" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="1231.0" y="864" font-family="Helvetica, Arial, sans-serif" font-size="9.5" font-weight="400" fill="#8a6410" text-anchor="middle">sitemap.xml + robots.txt</text>
+<text x="80" y="930" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#0e4c92" text-anchor="start">Navigation rules:</text>
+<text x="80" y="952" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#2a3742" text-anchor="start">•  Every page links to every other page through the header nav and the footer site map, so no page is more than one click from any other.</text>
+<text x="80" y="972" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#2a3742" text-anchor="start">•  Services uses in-page anchors (#leak-detection etc.) rather than child pages, keeping the structure flat and the crawl depth shallow.</text>
+<text x="80" y="992" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="400" fill="#2a3742" text-anchor="start">•  Home, Services and About each push traffic to booking.html, which is the single conversion point of the site.</text></svg>
