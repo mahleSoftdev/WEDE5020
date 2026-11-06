@@ -1,0 +1,8 @@
+# Allow all crawlers; keep documentation and scripts' vendor code out of search results.
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /Screenshots/
+Disallow: /js/vendor/
+
+Sitemap: https://mahlesoftdev.github.io/WEDE5020/sitemap.xml

@@ -20,6 +20,18 @@
   <meta name="description" content="Plumbing services and prices in Pretoria: leak detection, geyser installation, blocked drains, bathroom and kitchen fittings, gas installations and 24/7 emergency call-outs.">
   <meta name="keywords" content="plumbing prices Pretoria, geyser installation cost, blocked drain jetting, leak detection, gas certificate of compliance, emergency plumber">
   <meta name="author" content="John's Plumbing Services">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org; connect-src https://jsonplaceholder.typicode.com; form-action 'self' https://jsonplaceholder.typicode.com; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#0e4c92">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mahlesoftdev.github.io/WEDE5020/services.html">
+  <meta property="og:title" content="Services and prices | John's Plumbing Services">
+  <meta property="og:description" content="Plumbing services and prices in Pretoria: leak detection, geyser installation, blocked drains, bathroom and kitchen fittings, gas installations and 24/7 emergency call-outs.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mahlesoftdev.github.io/WEDE5020/services.html">
+  <meta property="og:image" content="https://mahlesoftdev.github.io/WEDE5020/images/hero-plumber-1200.jpg">
+  <meta property="og:locale" content="en_ZA">
+  <meta name="twitter:card" content="summary_large_image">
 
   <title>Services and prices | John's Plumbing Services</title>
 
@@ -243,6 +255,54 @@
       </div>
     </section>
 
+    <!-- DYNAMIC SERVICE FINDER: search, filter and sort (js/services.js) -->
+    <section class="section section--tinted" id="finder" aria-labelledby="finder-heading">
+      <div class="wrapper">
+        <h2 class="section__heading" id="finder-heading">Find a service</h2>
+        <p class="section__intro">Search by keyword, filter by category and sort by price.</p>
+        <div class="toolbar">
+          <p class="field"><label class="field__label" for="service-search">Search</label>
+            <input class="field__input" type="search" id="service-search" placeholder="e.g. geyser, camera, tap" maxlength="40" autocomplete="off"></p>
+          <p class="field"><label class="field__label" for="service-category">Category</label>
+            <select class="field__input" id="service-category"><option value="">All categories</option></select></p>
+          <p class="field"><label class="field__label" for="service-sort">Sort by</label>
+            <select class="field__input" id="service-sort">
+              <option value="name">Name (A to Z)</option>
+              <option value="price-asc">Price: low to high</option>
+              <option value="price-desc">Price: high to low</option>
+            </select></p>
+          <p class="field toolbar__reset"><button class="button button--ghost" type="button" id="service-reset">Reset</button></p>
+        </div>
+        <p id="service-count" class="toolbar__count" role="status"></p>
+        <div class="card-grid" id="service-results"></div>
+        <p id="service-empty" hidden>No services match that search. Try a different word or <a href="contact.html">ask us</a>.</p>
+        <noscript><p>Turn on JavaScript to search the services, or see the price list below.</p></noscript>
+      </div>
+    </section>
+
+    <!-- TABS: what to expect -->
+    <section class="section" aria-labelledby="expect-heading">
+      <div class="wrapper">
+        <h2 class="section__heading" id="expect-heading">What to expect</h2>
+        <div class="tabs">
+          <div class="tabs__list" role="tablist" aria-label="Job stages">
+            <button class="tabs__tab is-active" role="tab" id="tab-before" aria-controls="panel-before" aria-selected="true">Before we arrive</button>
+            <button class="tabs__tab" role="tab" id="tab-day" aria-controls="panel-day" aria-selected="false" tabindex="-1">On the day</button>
+            <button class="tabs__tab" role="tab" id="tab-after" aria-controls="panel-after" aria-selected="false" tabindex="-1">Afterwards</button>
+          </div>
+          <div class="tabs__panel" role="tabpanel" id="panel-before" aria-labelledby="tab-before">
+            <p>Close the main stopcock, clear the area under sinks and send us a photo if you can. You get a two-hour arrival window and the plumber&rsquo;s name by SMS.</p>
+          </div>
+          <div class="tabs__panel" role="tabpanel" id="panel-day" aria-labelledby="tab-day" hidden>
+            <p>The plumber diagnoses the fault, writes the price down and waits for your approval. Nothing starts before you say yes. Need a slot? <a href="booking.html">Book a plumber</a>.</p>
+          </div>
+          <div class="tabs__panel" role="tabpanel" id="panel-after" aria-labelledby="tab-after" hidden>
+            <p>You receive the invoice, photographs and any Certificate of Compliance by email the same day, plus a 12-month workmanship guarantee. See <a href="gallery.html">recent jobs</a>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ---------------------------------------------------------------------
          PRICE TABLE
          A <table> is the correct element here because this is genuinely
@@ -401,5 +461,9 @@
     </div>
   </footer>
 
+  <script src="js/vendor/jquery.min.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/services.js" defer></script>
 </body>
 </html>

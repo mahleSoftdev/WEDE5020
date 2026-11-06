@@ -9,6 +9,15 @@
   <meta name="description" content="John's Plumbing Services - licensed, insured plumbers in Pretoria. Leak detection, geyser installation, blocked drains and 24/7 emergency call-outs. Book online or call for a free quote.">
   <meta name="keywords" content="plumber Pretoria, emergency plumber Gauteng, leak detection, geyser installation, blocked drain, plumbing quote">
   <meta name="author" content="John's Plumbing Services">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org; connect-src https://jsonplaceholder.typicode.com; form-action 'self' https://jsonplaceholder.typicode.com; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#0e4c92">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mahlesoftdev.github.io/WEDE5020/">
+  <meta property="og:url" content="https://mahlesoftdev.github.io/WEDE5020/">
+  <meta property="og:image" content="https://mahlesoftdev.github.io/WEDE5020/images/hero-plumber-1200.jpg">
+  <meta property="og:locale" content="en_ZA">
+  <meta name="twitter:card" content="summary_large_image">
   <meta property="og:title" content="John's Plumbing Services - Reliable Plumbers in Pretoria">
   <meta property="og:description" content="Licensed, insured plumbers serving Pretoria, Centurion and Midrand. 24/7 emergency call-outs.">
   <meta property="og:type" content="website">
@@ -22,7 +31,11 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
+  <link rel="preload" as="image" href="images/hero-plumber-800.jpg" imagesrcset="images/hero-plumber-480.jpg 480w, images/hero-plumber-800.jpg 800w, images/hero-plumber-1200.jpg 1200w" imagesizes="(min-width: 64em) 50vw, (min-width: 48em) 60vw, 100vw">
   <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Plumber","name":"John's Plumbing Services","url":"https://mahlesoftdev.github.io/WEDE5020/","telephone":"+27123456789","email":"info@johnsplumbing.co.za","image":"https://mahlesoftdev.github.io/WEDE5020/images/hero-plumber-1200.jpg","priceRange":"R450 - R3900","address":{"@type":"PostalAddress","streetAddress":"14 Rigel Avenue, Waterkloof Ridge","addressLocality":"Pretoria","postalCode":"0181","addressCountry":"ZA"},"geo":{"@type":"GeoCoordinates","latitude":-25.789,"longitude":28.28},"openingHours":["Mo-Fr 07:00-17:00","Sa 08:00-13:00"],"areaServed":["Pretoria","Centurion","Midrand","Akasia"]}
+  </script>
 </head>
 
 <body>
@@ -123,7 +136,7 @@
       <div class="wrapper">
         <h2 class="section__heading" id="services-heading">What we fix most often</h2>
         <p class="section__intro">
-          Six trades in one van. If it carries water, gas or waste, we work on it.
+          Six trades in one van. If it carries water, gas or waste, we work on it. Browse the <a href="services.html">full services and price list</a> or <a href="about.html">meet the team</a>.
         </p>
 
         <div class="card-grid">
@@ -204,7 +217,7 @@
       <div class="wrapper">
         <h2 class="section__heading" id="reviews-heading">What customers say</h2>
 
-        <div class="card-grid">
+        <div class="card-grid" id="review-list">
 
           <figure class="quote">
             <blockquote class="quote__body">
@@ -237,6 +250,7 @@
           </figure>
 
         </div>
+        <p class="section__more"><button type="button" class="button button--ghost" id="more-reviews">Load more reviews</button></p>
       </div>
     </section>
 
@@ -305,5 +319,8 @@
     </div>
   </footer>
 
+  <script src="js/vendor/jquery.min.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
 </html>

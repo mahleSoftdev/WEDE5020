@@ -8,6 +8,18 @@
   <meta name="description" content="Contact John's Plumbing Services in Pretoria. Phone 012 345 6789, 24-hour emergency line 082 345 6789, or send an enquiry and we will reply within one working hour.">
   <meta name="keywords" content="contact plumber Pretoria, plumbing quote request, emergency plumber number, John's Plumbing contact">
   <meta name="author" content="John's Plumbing Services">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org; connect-src https://jsonplaceholder.typicode.com; form-action 'self' https://jsonplaceholder.typicode.com; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#0e4c92">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mahlesoftdev.github.io/WEDE5020/contact.html">
+  <meta property="og:title" content="Contact us | John's Plumbing Services">
+  <meta property="og:description" content="Contact John's Plumbing Services in Pretoria. Phone 012 345 6789, 24-hour emergency line 082 345 6789, or send an enquiry and we will reply within one working hour.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mahlesoftdev.github.io/WEDE5020/contact.html">
+  <meta property="og:image" content="https://mahlesoftdev.github.io/WEDE5020/images/hero-plumber-1200.jpg">
+  <meta property="og:locale" content="en_ZA">
+  <meta name="twitter:card" content="summary_large_image">
 
   <title>Contact us | John's Plumbing Services</title>
 
@@ -15,6 +27,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="js/vendor/leaflet/leaflet.css">
 </head>
 
 <body>
@@ -118,9 +131,10 @@
 
           
           <figure class="map-placeholder">
-            <div class="map-placeholder__box" role="img" aria-label="Map showing the office location at 14 Rigel Avenue, Waterkloof Ridge, Pretoria">
-              <p>Map: 14 Rigel Avenue, Waterkloof Ridge</p>
+            <div id="map" class="map" role="region" aria-label="Map showing the office at 14 Rigel Avenue, Waterkloof Ridge, Pretoria">
+              <p class="map__fallback">Map: 14 Rigel Avenue, Waterkloof Ridge, Pretoria</p>
             </div>
+            <p><button type="button" class="button button--ghost" id="map-area-toggle" aria-pressed="false">Show our 35km service area</button></p>
             <figcaption>Off-street parking is available for walk-in quotations.</figcaption>
           </figure>
         </div>
@@ -128,9 +142,9 @@
       
         <div class="contact-form">
        
-          <form class="form">
+          <form class="form" id="contact-form" action="https://jsonplaceholder.typicode.com/posts" method="post" novalidate data-recipient="info@johnsplumbing.co.za">
 
-            <h2 class="section__heading">Send an enquiry</h2>
+            <h2 class="section__heading">Send us a message</h2>
             <p class="form__intro">
               Fields marked with an asterisk are required. We never share your details.
             </p>
@@ -160,7 +174,7 @@
                 
                 <input class="field__input" type="tel" id="contact-phone" name="phone"
                        autocomplete="tel" placeholder="082 345 6789"
-                       pattern="[0-9+()\s-]{10,15}" aria-describedby="phone-hint">
+                       pattern="[0-9+\(\)\s\-]{10,15}" aria-describedby="phone-hint">
                 <small class="field__hint" id="phone-hint">Optional, but a number gets you a faster answer.</small>
               </p>
             </fieldset>
@@ -206,8 +220,9 @@
               <p class="field">
                 <label class="field__label" for="contact-message">Message <span aria-hidden="true">*</span></label>
                 <textarea class="field__input field__input--area" id="contact-message" name="message"
-                          rows="6" required
+                          rows="6" required minlength="20" maxlength="1000" data-counter="message-count"
                           placeholder="Tell us what is happening, for example: slow draining shower for two weeks, water backing up when the washing machine runs."></textarea>
+                <small class="field__hint" id="message-count"></small>
               </p>
 
               <p class="field field--check">
@@ -218,8 +233,10 @@
               </p>
             </fieldset>
 
+            <p class="hp" aria-hidden="true"><label>Leave this field empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></p>
+            <p class="form__status" role="status" hidden></p>
+
             <p class="form__actions">
-             
               <button class="button button--primary" type="submit">Send enquiry</button>
               <button class="button button--ghost" type="reset">Clear form</button>
             </p>
@@ -279,6 +296,24 @@
 
   </main>
 
+  <!-- EMAIL PREVIEW MODAL: filled in by js/forms.js after validation -->
+  <div class="modal" id="email-modal" hidden role="dialog" aria-modal="true" aria-labelledby="email-title">
+    <div class="modal__box">
+      <button type="button" class="modal__close" data-modal-close aria-label="Close">&times;</button>
+      <h2 id="email-title">Your email is ready</h2>
+      <p>Check it, then send it from your own email app.</p>
+      <dl class="result-list">
+        <dt>To</dt><dd id="email-to"></dd>
+        <dt>Subject</dt><dd id="email-subject"></dd>
+      </dl>
+      <pre class="email-preview" id="email-body"></pre>
+      <p class="modal__actions">
+        <a class="button button--primary" id="email-send" href="#">Open in my email app</a>
+        <button type="button" class="button button--ghost" id="email-copy">Copy text</button>
+      </p>
+    </div>
+  </div>
+
   <!-- SITE FOOTER -->
   <footer class="site-footer">
     <div class="wrapper site-footer__grid">
@@ -331,5 +366,10 @@
     </div>
   </footer>
 
+  <script src="js/vendor/jquery.min.js" defer></script>
+  <script src="js/vendor/leaflet/leaflet.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/forms.js" defer></script>
+  <script src="js/map.js" defer></script>
 </body>
 </html>

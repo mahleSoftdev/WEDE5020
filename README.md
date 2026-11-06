@@ -1,7 +1,7 @@
 # John's Plumbing Services WEDE5020 Portfolio of Evidence
 
 A six-page, hand-coded, mobile-first website for a fictional plumbing business in
-Pretoria. Built with HTML5 and CSS3 only,no frameworks, no JavaScript.
+Pretoria. Built with HTML5 and CSS3, enhanced in Part 3 with JavaScript (jQuery and Leaflet).
 
 **Student:** Asemahle · Diploma in Software Development ·
 **Module:** WEDE5020: Web Development · Part 2
@@ -34,7 +34,10 @@ WEDE5020-ASEMAHLE/
 ├── css/
 │   └── style.css         The single external stylesheet, linked by all six pages
 ├── images/               Photographs and logo, exported at several widths for srcset
-├── js/                   Reserved for Part 3 — empty, the site needs no JavaScript
+├── js/                   Part 3 scripts: main, services, gallery, forms, map, data
+│   └── vendor/           jQuery 3.7.1 and Leaflet 1.9.4, served locally
+├── robots.txt            Crawler rules
+├── sitemap.xml           All six pages for search engines
 ├── private/              Documentation, never linked from a page
 │   ├── Website Proposal 1.docx
 │   ├── Website Proposal 2.docx
@@ -56,10 +59,35 @@ WEDE5020-ASEMAHLE/
 - **Relative units**: `rem` for type, `em` for component padding, `%` and `ch` for
   widths. No fixed pixel layout values.
 - **Responsive images**: `srcset` and `sizes` on every content image.
-- **No JavaScript**: the mobile menu, the accordions and form validation are all
-  native HTML and CSS.
 - **Accessibility**: skip link, visible keyboard focus, labelled controls,
   `prefers-reduced-motion` and `prefers-contrast` support.
+
+## Part 3: JavaScript, SEO, forms
+
+- **Interactive elements** (`js/main.js`): animated accordion (FAQ, credentials), tabs
+  (services), modals (call-out terms, email preview), scroll-in animations, back-to-top,
+  open-now badge, share links.
+- **Map** (`js/map.js`): Leaflet and OpenStreetMap on `contact.html`, with a service-area toggle.
+- **Gallery** (`js/gallery.js`): category filter, search and a keyboard-friendly lightbox.
+- **Dynamic content** (`js/services.js`, `js/data.js`): the services list is built from data with
+  search, category filter and price sort; extra reviews load on the home page.
+- **Forms** (`js/forms.js`): HTML5 attributes plus JavaScript validation, inline error messages,
+  honeypot, and AJAX submission to the form's `action`.
+  - `booking.html` is the service enquiry form. After validation it answers with an
+    estimated cost and slot availability (availability is simulated).
+  - `contact.html` compiles the message into an email and opens it in the visitor's mail app
+    (recipient is the `data-recipient` attribute on the form).
+  - The `action` URL is a public test endpoint (jsonplaceholder). Replace it with your own
+    back end when you have one.
+- **SEO**: title and description per page, canonical and Open Graph tags, one `h1` per page,
+  JSON-LD `Plumber` data on the home page, `robots.txt`, `sitemap.xml`, internal links.
+  Keyword research and the off-page plan are in `private/SEO-notes.md`.
+- **Speed**: scripts use `defer`, hero image is preloaded, fonts use `display=swap`, images have
+  width and height and lazy loading, libraries are served locally.
+- **Security**: Content-Security-Policy meta tag, no inline scripts, user text inserted with
+  `.text()` never `.html()`, `rel="noopener noreferrer"` on external links, honeypot and
+  double-submit protection. GitHub Pages cannot set HTTP headers, so on a real host also add
+  `X-Content-Type-Options`, `X-Frame-Options` and HTTPS-only (HSTS).
 
 ## Running it locally
 

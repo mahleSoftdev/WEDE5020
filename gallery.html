@@ -8,6 +8,18 @@
   <meta name="description" content="Photographs of completed plumbing jobs by John's Plumbing Services in Pretoria - geyser replacements, leak repairs, drain jetting and bathroom installations.">
   <meta name="keywords" content="plumbing gallery Pretoria, completed plumbing jobs, geyser replacement photos, bathroom installation">
   <meta name="author" content="John's Plumbing Services">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org; connect-src https://jsonplaceholder.typicode.com; form-action 'self' https://jsonplaceholder.typicode.com; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#0e4c92">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mahlesoftdev.github.io/WEDE5020/gallery.html">
+  <meta property="og:title" content="Work gallery | John's Plumbing Services">
+  <meta property="og:description" content="Photographs of completed plumbing jobs by John's Plumbing Services in Pretoria - geyser replacements, leak repairs, drain jetting and bathroom installations.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mahlesoftdev.github.io/WEDE5020/gallery.html">
+  <meta property="og:image" content="https://mahlesoftdev.github.io/WEDE5020/images/hero-plumber-1200.jpg">
+  <meta property="og:locale" content="en_ZA">
+  <meta name="twitter:card" content="summary_large_image">
 
   <title>Work gallery | John's Plumbing Services</title>
 
@@ -61,7 +73,7 @@
         <h1 class="page-head__title">Recent work</h1>
         <p class="page-head__lead">
           Jobs completed across Pretoria and Centurion. Every photograph is our own
-          work, published with the customer&rsquo;s permission.
+          work, published with the customer&rsquo;s permission. Prices for similar jobs are on the <a href="services.html">services page</a>.
         </p>
 
         <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -90,9 +102,23 @@
       <div class="wrapper">
         <h2 class="section__heading" id="gallery-heading">Completed jobs</h2>
 
+        <div class="toolbar">
+          <p class="field"><label class="field__label" for="gallery-search">Search the gallery</label>
+            <input class="field__input" type="search" id="gallery-search" placeholder="e.g. geyser, Centurion" maxlength="40" autocomplete="off"></p>
+          <div class="filter-group" role="group" aria-label="Filter by job type">
+            <button type="button" class="filter-btn is-active" data-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="filter-btn" data-filter="fittings" aria-pressed="false">Fittings</button>
+            <button type="button" class="filter-btn" data-filter="leaks" aria-pressed="false">Leaks</button>
+            <button type="button" class="filter-btn" data-filter="drains" aria-pressed="false">Drains</button>
+            <button type="button" class="filter-btn" data-filter="geysers" aria-pressed="false">Geysers</button>
+          </div>
+        </div>
+        <p id="gallery-count" class="toolbar__count" role="status"></p>
+        <p id="gallery-empty" hidden>No photos match. Clear the search or pick another filter.</p>
+
         <div class="gallery-grid">
 
-          <figure class="gallery__item">
+          <figure class="gallery__item" data-category="fittings">
             <img src="images/gallery-bathroom-fitting-800.jpg"
                  srcset="images/gallery-bathroom-fitting-400.jpg 400w,
                          images/gallery-bathroom-fitting-800.jpg 800w"
@@ -107,7 +133,7 @@
             </figcaption>
           </figure>
 
-          <figure class="gallery__item">
+          <figure class="gallery__item" data-category="leaks">
             <img src="images/gallery-toolkit-800.jpg"
                  srcset="images/gallery-toolkit-400.jpg 400w,
                          images/gallery-toolkit-800.jpg 800w"
@@ -122,7 +148,7 @@
             </figcaption>
           </figure>
 
-          <figure class="gallery__item">
+          <figure class="gallery__item" data-category="leaks">
             <img src="images/gallery-pipe-repair-800.jpg"
                  srcset="images/gallery-pipe-repair-400.jpg 400w,
                          images/gallery-pipe-repair-800.jpg 800w"
@@ -137,7 +163,7 @@
             </figcaption>
           </figure>
 
-          <figure class="gallery__item">
+          <figure class="gallery__item" data-category="drains">
             <img src="images/hero-plumber-800.jpg"
                  srcset="images/hero-plumber-480.jpg 480w,
                          images/hero-plumber-800.jpg 800w,
@@ -153,7 +179,7 @@
             </figcaption>
           </figure>
 
-          <figure class="gallery__item">
+          <figure class="gallery__item" data-category="fittings">
             <img src="images/gallery-bathroom-fitting-800.jpg"
                  srcset="images/gallery-bathroom-fitting-400.jpg 400w,
                          images/gallery-bathroom-fitting-800.jpg 800w"
@@ -168,7 +194,7 @@
             </figcaption>
           </figure>
 
-          <figure class="gallery__item">
+          <figure class="gallery__item" data-category="geysers">
             <img src="images/gallery-pipe-repair-800.jpg"
                  srcset="images/gallery-pipe-repair-400.jpg 400w,
                          images/gallery-pipe-repair-800.jpg 800w"
@@ -268,5 +294,8 @@
     </div>
   </footer>
 
+  <script src="js/vendor/jquery.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/gallery.js" defer></script>
 </body>
 </html>

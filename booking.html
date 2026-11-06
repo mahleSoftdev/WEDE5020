@@ -8,6 +8,18 @@
   <meta name="description" content="Book a plumber online in Pretoria. Choose a service, pick a two-hour slot, and John's Plumbing Services will confirm within one working hour.">
   <meta name="keywords" content="book plumber online Pretoria, plumbing appointment, schedule plumber Gauteng, emergency booking">
   <meta name="author" content="John's Plumbing Services">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org; connect-src https://jsonplaceholder.typicode.com; form-action 'self' https://jsonplaceholder.typicode.com; base-uri 'self'; object-src 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="theme-color" content="#0e4c92">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mahlesoftdev.github.io/WEDE5020/booking.html">
+  <meta property="og:title" content="Book a plumber | John's Plumbing Services">
+  <meta property="og:description" content="Book a plumber online in Pretoria. Choose a service, pick a two-hour slot, and John's Plumbing Services will confirm within one working hour.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mahlesoftdev.github.io/WEDE5020/booking.html">
+  <meta property="og:image" content="https://mahlesoftdev.github.io/WEDE5020/images/hero-plumber-1200.jpg">
+  <meta property="og:locale" content="en_ZA">
+  <meta name="twitter:card" content="summary_large_image">
 
   <title>Book a plumber | John's Plumbing Services</title>
 
@@ -90,8 +102,8 @@
 
         <!-- THE BOOKING FORM  -->
         <div class="booking-form">
-          <form class="form">
-            <h2 class="section__heading" id="booking-heading">Appointment request</h2>
+          <form class="form" id="booking-form" action="https://jsonplaceholder.typicode.com/posts" method="post" novalidate>
+            <h2 class="section__heading" id="booking-heading">Service enquiry and appointment request</h2>
             <p class="form__intro">
               Four short steps. Fields marked with an asterisk are required.
             </p>
@@ -111,7 +123,7 @@
                   <label class="field__label" for="book-phone">Mobile number <span aria-hidden="true">*</span></label>
                   <input class="field__input" type="tel" id="book-phone" name="phone"
                          required autocomplete="tel" placeholder="082 345 6789"
-                         pattern="[0-9+()\s-]{10,15}" aria-describedby="book-phone-hint">
+                         pattern="[0-9+\(\)\s\-]{10,15}" aria-describedby="book-phone-hint">
                   <small class="field__hint" id="book-phone-hint">We send the confirmation by SMS or WhatsApp.</small>
                 </p>
               </div>
@@ -207,7 +219,7 @@
 
               <p class="field">
                 <label class="field__label" for="book-notes">Describe the problem</label>
-                <textarea class="field__input field__input--area" id="book-notes" name="notes" rows="5"
+                <textarea class="field__input field__input--area" id="book-notes" name="notes" rows="5" maxlength="500"
                           placeholder="For example: the toilet in the main bathroom runs constantly and the cistern will not refill properly."></textarea>
                 <small class="field__hint">The more detail you give, the more accurate the price we bring with us.</small>
               </p>
@@ -222,7 +234,7 @@
                   <label class="field__label" for="book-date">Preferred date <span aria-hidden="true">*</span></label>
                   
                   <input class="field__input" type="date" id="book-date" name="date"
-                         required min="2026-01-01">
+                         required>
                 </p>
 
                 <p class="field">
@@ -253,8 +265,11 @@
               </p>
             </fieldset>
 
+            <p class="hp" aria-hidden="true"><label>Leave this field empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></p>
+            <p class="form__status" role="status" hidden></p>
+
             <p class="form__actions">
-              <button class="button button--primary" type="submit">Request this booking</button>
+              <button class="button button--primary" type="submit">Get estimate and request slot</button>
               <button class="button button--ghost" type="reset">Start again</button>
             </p>
 
@@ -262,10 +277,12 @@
               <small>
                 Submitting this form requests a slot; it does not confirm one. You will
                 receive a confirmation message before a plumber is dispatched.
+                Read the <a href="#terms-modal" data-modal-open="terms-modal">call-out terms</a>.
               </small>
             </p>
 
           </form>
+          <div class="form-result" id="booking-result" hidden aria-live="polite"></div>
         </div>
 
         <!-- SUPPORTING SIDEBAR -->
@@ -313,6 +330,20 @@
     </section>
 
   </main>
+
+  <div class="modal" id="terms-modal" hidden role="dialog" aria-modal="true" aria-labelledby="terms-title">
+    <div class="modal__box">
+      <button type="button" class="modal__close" data-modal-close aria-label="Close">&times;</button>
+      <h2 id="terms-title">Call-out terms</h2>
+      <ul class="tick-list">
+        <li>Standard call-out and diagnosis is R650, credited against the repair if you proceed.</li>
+        <li>Slots after 16:00 carry a R500 after-hours surcharge.</li>
+        <li>Parts and materials are charged at cost plus 15%.</li>
+        <li>Nothing starts before you approve the written price.</li>
+      </ul>
+      <p class="modal__actions"><button type="button" class="button button--primary" data-modal-close>Got it</button></p>
+    </div>
+  </div>
 
   <!-- SITE FOOTER -->
   <footer class="site-footer">
@@ -366,5 +397,8 @@
     </div>
   </footer>
 
+  <script src="js/vendor/jquery.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/forms.js" defer></script>
 </body>
 </html>
